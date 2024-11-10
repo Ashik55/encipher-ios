@@ -52,13 +52,13 @@ struct AuthenticationServerSelectionScreen: View {
             OnboardingIconImage(image: Asset.Images.authenticationServerSelectionIcon)
                 .padding(.bottom, 8)
             
-            Text(viewModel.viewState.headerTitle)
+            Text("Select Your Server") //viewModel.viewState.headerTitle
                 .font(theme.fonts.title2B)
                 .multilineTextAlignment(.center)
                 .foregroundColor(theme.colors.primaryContent)
                 .accessibilityIdentifier("headerTitle")
             
-            Text(viewModel.viewState.headerMessage)
+            Text("What is the address of your server?") //viewModel.viewState.headerMessage
                 .font(theme.fonts.body)
                 .multilineTextAlignment(.center)
                 .foregroundColor(theme.colors.secondaryContent)
@@ -103,7 +103,9 @@ struct AuthenticationServerSelectionScreen: View {
         .keyboardType(.URL)
         .autocapitalization(.none)
         .disableAutocorrection(true)
-        .textFieldStyle(BorderedInputFieldStyle(isEditing: isEditingTextField,
+        .textFieldStyle(BorderedInputFieldStyle(
+            
+            isEditing: isEditingTextField,
                                                 isError: viewModel.viewState.isShowingFooterError))
         .onChange(of: viewModel.homeserverAddress) { _ in viewModel.send(viewAction: .clearFooterError) }
         .accessibilityIdentifier("addressTextField")

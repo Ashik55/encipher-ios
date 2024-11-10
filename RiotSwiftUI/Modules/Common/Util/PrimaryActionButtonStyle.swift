@@ -32,7 +32,7 @@ struct PrimaryActionButtonStyle: ButtonStyle {
             .foregroundColor(fontColor)
             .font(font ?? theme.fonts.body)
             .background(backgroundColor.opacity(backgroundOpacity(when: configuration.isPressed)))
-            .cornerRadius(8.0)
+            .cornerRadius(16)
     }
     
     func backgroundOpacity(when isPressed: Bool) -> CGFloat {

@@ -37,6 +37,9 @@ public struct ColorSwiftUI: Colors {
     
     public let background: Color
     
+    public let inputTextBackground: Color
+    public let bubbleBackground: Color
+    
     public var ems: Color
     
     public let links: Color
@@ -56,6 +59,8 @@ public struct ColorSwiftUI: Colors {
         tile = Color(values.tile)
         navigation = Color(values.navigation)
         background = Color(values.background)
+        inputTextBackground = Color(values.inputTextBackground)
+        bubbleBackground = Color(values.bubbleBackground)
         ems = Color(values.ems)
         links = Color(values.links)
         namesAndAvatars = values.namesAndAvatars.map({ Color($0) })

@@ -47,16 +47,16 @@ typedef NS_ENUM(NSUInteger, SECTION_TAG)
     SECTION_TAG_SECURITY,
     SECTION_TAG_NOTIFICATIONS,
     SECTION_TAG_CALLS,
-    SECTION_TAG_DISCOVERY,
-    SECTION_TAG_IDENTITY_SERVER,
+//    SECTION_TAG_DISCOVERY,
+//    SECTION_TAG_IDENTITY_SERVER,
     SECTION_TAG_LOCAL_CONTACTS,
     SECTION_TAG_IGNORED_USERS,
     SECTION_TAG_INTEGRATIONS,
     SECTION_TAG_USER_INTERFACE,
     SECTION_TAG_TIMELINE,
     SECTION_TAG_PRESENCE,
-    SECTION_TAG_ADVANCED,
-    SECTION_TAG_ABOUT,
+//    SECTION_TAG_ADVANCED,
+//    SECTION_TAG_ABOUT,
     SECTION_TAG_LABS,
     SECTION_TAG_DEACTIVATE_ACCOUNT
 };
@@ -461,28 +461,28 @@ SSOAuthenticationPresenterDelegate>
         [tmpSections addObject:sectionCalls];
     }
     
-    if (BuildSettings.settingsScreenShowDiscoverySettings)
-    {
-        Section *sectionDiscovery = [Section sectionWithTag:SECTION_TAG_DISCOVERY];
-        NSInteger count = self.settingsDiscoveryTableViewSection.numberOfRows;
-        for (NSInteger index = 0; index < count; index++)
-        {
-            [sectionDiscovery addRowWithTag:index];
-        }
-        sectionDiscovery.headerTitle = [VectorL10n settingsDiscoverySettings];
-        sectionDiscovery.attributedFooterTitle = self.settingsDiscoveryTableViewSection.attributedFooterTitle;
-        [tmpSections addObject:sectionDiscovery];
-    }
-    
-    if (BuildSettings.settingsScreenAllowIdentityServerConfig)
-    {
-        Section *sectionIdentityServer = [Section sectionWithTag:SECTION_TAG_IDENTITY_SERVER];
-        [sectionIdentityServer addRowWithTag:IDENTITY_SERVER_INDEX];
-        
-        sectionIdentityServer.headerTitle = [VectorL10n settingsIdentityServerSettings];
-        sectionIdentityServer.footerTitle = account.mxSession.identityService.identityServer ? VectorL10n.settingsIdentityServerDescription : VectorL10n.settingsIdentityServerNoIsDescription;
-        [tmpSections addObject:sectionIdentityServer];
-    }
+//    if (BuildSettings.settingsScreenShowDiscoverySettings)
+//    {
+//        Section *sectionDiscovery = [Section sectionWithTag:SECTION_TAG_DISCOVERY];
+//        NSInteger count = self.settingsDiscoveryTableViewSection.numberOfRows;
+//        for (NSInteger index = 0; index < count; index++)
+//        {
+//            [sectionDiscovery addRowWithTag:index];
+//        }
+//        sectionDiscovery.headerTitle = [VectorL10n settingsDiscoverySettings];
+//        sectionDiscovery.attributedFooterTitle = self.settingsDiscoveryTableViewSection.attributedFooterTitle;
+//        [tmpSections addObject:sectionDiscovery];
+//    }
+//    
+//    if (BuildSettings.settingsScreenAllowIdentityServerConfig)
+//    {
+//        Section *sectionIdentityServer = [Section sectionWithTag:SECTION_TAG_IDENTITY_SERVER];
+//        [sectionIdentityServer addRowWithTag:IDENTITY_SERVER_INDEX];
+//        
+//        sectionIdentityServer.headerTitle = [VectorL10n settingsIdentityServerSettings];
+//        sectionIdentityServer.footerTitle = account.mxSession.identityService.identityServer ? VectorL10n.settingsIdentityServerDescription : VectorL10n.settingsIdentityServerNoIsDescription;
+//        [tmpSections addObject:sectionIdentityServer];
+//    }
     
     if (BuildSettings.allowLocalContactsAccess)
     {
@@ -554,48 +554,49 @@ SSOAuthenticationPresenterDelegate>
         [tmpSections addObject:sectionPresence];
     }
     
-    Section *sectionAdvanced = [Section sectionWithTag:SECTION_TAG_ADVANCED];
-    sectionAdvanced.headerTitle = [VectorL10n settingsAdvanced];
+    //commented by Ashiq
+//    Section *sectionAdvanced = [Section sectionWithTag:SECTION_TAG_ADVANCED];
+//    sectionAdvanced.headerTitle = [VectorL10n settingsAdvanced];
+//    
+//    if (BuildSettings.settingsScreenAllowChangingCrashUsageDataSettings)
+//    {
+//        [sectionAdvanced addRowWithTag:ADVANCED_CRASH_REPORT_INDEX];
+//    }
+//    if (BuildSettings.settingsScreenAllowChangingRageshakeSettings)
+//    {
+//        [sectionAdvanced addRowWithTag:ADVANCED_ENABLE_RAGESHAKE_INDEX];
+//    }
+//    [sectionAdvanced addRowWithTag:ADVANCED_MARK_ALL_AS_READ_INDEX];
+//    [sectionAdvanced addRowWithTag:ADVANCED_CLEAR_CACHE_INDEX];
+//    if (BuildSettings.settingsScreenAllowBugReportingManually)
+//    {
+//        [sectionAdvanced addRowWithTag:ADVANCED_REPORT_BUG_INDEX];
+//    }
+//    
+//    [tmpSections addObject:sectionAdvanced];
     
-    if (BuildSettings.settingsScreenAllowChangingCrashUsageDataSettings)
-    {
-        [sectionAdvanced addRowWithTag:ADVANCED_CRASH_REPORT_INDEX];
-    }
-    if (BuildSettings.settingsScreenAllowChangingRageshakeSettings)
-    {
-        [sectionAdvanced addRowWithTag:ADVANCED_ENABLE_RAGESHAKE_INDEX];
-    }
-    [sectionAdvanced addRowWithTag:ADVANCED_MARK_ALL_AS_READ_INDEX];
-    [sectionAdvanced addRowWithTag:ADVANCED_CLEAR_CACHE_INDEX];
-    if (BuildSettings.settingsScreenAllowBugReportingManually)
-    {
-        [sectionAdvanced addRowWithTag:ADVANCED_REPORT_BUG_INDEX];
-    }
-    
-    [tmpSections addObject:sectionAdvanced];
-    
-    Section *sectionAbout = [Section sectionWithTag:SECTION_TAG_ABOUT];
-    if (BuildSettings.applicationCopyrightUrlString.length)
-    {
-        [sectionAbout addRowWithTag:ABOUT_COPYRIGHT_INDEX];
-    }
-    if (BuildSettings.applicationAcceptableUsePolicyUrlString.length)
-    {
-        [sectionAbout addRowWithTag:ABOUT_ACCEPTABLE_USE_INDEX];
-    }
-    if (BuildSettings.applicationPrivacyPolicyUrlString.length)
-    {
-        [sectionAbout addRowWithTag:ABOUT_PRIVACY_INDEX];
-    }
-    [sectionAbout addRowWithTag:ABOUT_THIRD_PARTY_INDEX];
-    sectionAbout.headerTitle = VectorL10n.settingsAbout;
-
-    if (BuildSettings.settingsScreenShowAdvancedSettings)
-    {        
-        sectionAbout.footerTitle = [self buildAboutSectionFooterTitleWithAccount:account];
-    }
-    
-    [tmpSections addObject:sectionAbout];
+//    Section *sectionAbout = [Section sectionWithTag:SECTION_TAG_ABOUT];
+//    if (BuildSettings.applicationCopyrightUrlString.length)
+//    {
+//        [sectionAbout addRowWithTag:ABOUT_COPYRIGHT_INDEX];
+//    }
+//    if (BuildSettings.applicationAcceptableUsePolicyUrlString.length)
+//    {
+//        [sectionAbout addRowWithTag:ABOUT_ACCEPTABLE_USE_INDEX];
+//    }
+//    if (BuildSettings.applicationPrivacyPolicyUrlString.length)
+//    {
+//        [sectionAbout addRowWithTag:ABOUT_PRIVACY_INDEX];
+//    }
+//    [sectionAbout addRowWithTag:ABOUT_THIRD_PARTY_INDEX];
+//    sectionAbout.headerTitle = VectorL10n.settingsAbout;
+//
+//    if (BuildSettings.settingsScreenShowAdvancedSettings)
+//    {        
+//        sectionAbout.footerTitle = [self buildAboutSectionFooterTitleWithAccount:account];
+//    }
+//    
+//    [tmpSections addObject:sectionAbout];
     
     if (BuildSettings.settingsScreenShowLabSettings)
     {
@@ -1410,24 +1411,24 @@ SSOAuthenticationPresenterDelegate>
 
 - (void)scrollToDiscoverySection
 {
-    // settingsDiscoveryTableViewSection is a dynamic section, so check number of rows before scroll to avoid crashes
-    if (self.settingsDiscoveryTableViewSection.numberOfRows > 0)
-    {
-        NSIndexPath *discoveryIndexPath = [_tableViewSections exactIndexPathForRowTag:0 sectionTag:SECTION_TAG_DISCOVERY];
-        if (discoveryIndexPath)
-        {
-            [self.tableView scrollToRowAtIndexPath:discoveryIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-        }
-    }
-    else
-    {
-        //  this won't be precise in scroll location, but seems the best option for now
-        NSIndexPath *discoveryIndexPath = [_tableViewSections nearestIndexPathForRowTag:0 sectionTag:SECTION_TAG_DISCOVERY];
-        if (discoveryIndexPath)
-        {
-            [self.tableView scrollToRowAtIndexPath:discoveryIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
-        }
-    }
+//    // settingsDiscoveryTableViewSection is a dynamic section, so check number of rows before scroll to avoid crashes
+//    if (self.settingsDiscoveryTableViewSection.numberOfRows > 0)
+//    {
+//        NSIndexPath *discoveryIndexPath = [_tableViewSections exactIndexPathForRowTag:0 sectionTag:SECTION_TAG_DISCOVERY];
+//        if (discoveryIndexPath)
+//        {
+//            [self.tableView scrollToRowAtIndexPath:discoveryIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//        }
+//    }
+//    else
+//    {
+//        //  this won't be precise in scroll location, but seems the best option for now
+//        NSIndexPath *discoveryIndexPath = [_tableViewSections nearestIndexPathForRowTag:0 sectionTag:SECTION_TAG_DISCOVERY];
+//        if (discoveryIndexPath)
+//        {
+//            [self.tableView scrollToRowAtIndexPath:discoveryIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+//        }
+//    }
 }
 
 - (void)scrollToUserSettingsSection
@@ -2153,35 +2154,35 @@ SSOAuthenticationPresenterDelegate>
             cell = labelAndSwitchCell;
         }
     }
-    else if (section == SECTION_TAG_DISCOVERY)
-    {
-        cell = [self.settingsDiscoveryTableViewSection cellForRowAtRow:row];
-    }
-    else if (section == SECTION_TAG_IDENTITY_SERVER)
-    {
-        switch (row)
-        {
-            case IDENTITY_SERVER_INDEX:
-            {
-                MXKTableViewCell *isCell = [self getDefaultTableViewCell:tableView];
-
-                if (account.mxSession.identityService.identityServer)
-                {
-                    isCell.textLabel.text = account.mxSession.identityService.identityServer;
-                }
-                else
-                {
-                    isCell.textLabel.text = [VectorL10n settingsIdentityServerNoIs];
-                }
-                [isCell vc_setAccessoryDisclosureIndicatorWithCurrentTheme];
-                cell = isCell;
-                break;
-            }
-
-            default:
-                break;
-        }
-    }
+//    else if (section == SECTION_TAG_DISCOVERY)
+//    {
+//        cell = [self.settingsDiscoveryTableViewSection cellForRowAtRow:row];
+//    }
+//    else if (section == SECTION_TAG_IDENTITY_SERVER)
+//    {
+//        switch (row)
+//        {
+//            case IDENTITY_SERVER_INDEX:
+//            {
+//                MXKTableViewCell *isCell = [self getDefaultTableViewCell:tableView];
+//
+//                if (account.mxSession.identityService.identityServer)
+//                {
+//                    isCell.textLabel.text = account.mxSession.identityService.identityServer;
+//                }
+//                else
+//                {
+//                    isCell.textLabel.text = [VectorL10n settingsIdentityServerNoIs];
+//                }
+//                [isCell vc_setAccessoryDisclosureIndicatorWithCurrentTheme];
+//                cell = isCell;
+//                break;
+//            }
+//
+//            default:
+//                break;
+//        }
+//    }
     else if (section == SECTION_TAG_INTEGRATIONS)
     {
         switch (row) {
@@ -2355,151 +2356,151 @@ SSOAuthenticationPresenterDelegate>
             cell = labelAndSwitchCell;
         }
     }
-    else if (section == SECTION_TAG_ADVANCED)
-    {
-        if (row == ADVANCED_CRASH_REPORT_INDEX)
-        {
-            MXKTableViewCellWithLabelAndSwitch* sendCrashReportCell = [self getLabelAndSwitchCell:tableView forIndexPath:indexPath];
-            
-            sendCrashReportCell.mxkLabel.text = VectorL10n.settingsAnalyticsAndCrashData;
-            sendCrashReportCell.mxkSwitch.on = RiotSettings.shared.enableAnalytics;
-            sendCrashReportCell.mxkSwitch.onTintColor = ThemeService.shared.theme.tintColor;
-            sendCrashReportCell.mxkSwitch.enabled = YES;
-            [sendCrashReportCell.mxkSwitch addTarget:self action:@selector(toggleAnalytics:) forControlEvents:UIControlEventTouchUpInside];
-            
-            cell = sendCrashReportCell;
-        }
-        else if (row == ADVANCED_ENABLE_RAGESHAKE_INDEX)
-        {
-            MXKTableViewCellWithLabelAndSwitch* enableRageShakeCell = [self getLabelAndSwitchCell:tableView forIndexPath:indexPath];
-
-            enableRageShakeCell.mxkLabel.text = [VectorL10n settingsEnableRageshake];
-            enableRageShakeCell.mxkSwitch.on = RiotSettings.shared.enableRageShake;
-            enableRageShakeCell.mxkSwitch.onTintColor = ThemeService.shared.theme.tintColor;
-            enableRageShakeCell.mxkSwitch.enabled = YES;
-            [enableRageShakeCell.mxkSwitch addTarget:self action:@selector(toggleEnableRageShake:) forControlEvents:UIControlEventTouchUpInside];
-
-            cell = enableRageShakeCell;
-        }
-        else if (row == ADVANCED_MARK_ALL_AS_READ_INDEX)
-        {
-            MXKTableViewCellWithButton *markAllBtnCell = [tableView dequeueReusableCellWithIdentifier:[MXKTableViewCellWithButton defaultReuseIdentifier]];
-            if (!markAllBtnCell)
-            {
-                markAllBtnCell = [[MXKTableViewCellWithButton alloc] init];
-            }
-            else
-            {
-                // Fix https://github.com/vector-im/riot-ios/issues/1354
-                markAllBtnCell.mxkButton.titleLabel.text = nil;
-            }
-            
-            NSString *btnTitle = [VectorL10n settingsMarkAllAsRead];
-            [markAllBtnCell.mxkButton setTitle:btnTitle forState:UIControlStateNormal];
-            [markAllBtnCell.mxkButton setTitle:btnTitle forState:UIControlStateHighlighted];
-            [markAllBtnCell.mxkButton setTintColor:ThemeService.shared.theme.tintColor];
-            markAllBtnCell.mxkButton.titleLabel.font = [UIFont systemFontOfSize:17];
-            
-            [markAllBtnCell.mxkButton removeTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
-            [markAllBtnCell.mxkButton addTarget:self action:@selector(markAllAsRead:) forControlEvents:UIControlEventTouchUpInside];
-            markAllBtnCell.mxkButton.accessibilityIdentifier = nil;
-            
-            cell = markAllBtnCell;
-        }
-        else if (row == ADVANCED_CLEAR_CACHE_INDEX)
-        {
-            MXKTableViewCellWithButton *clearCacheBtnCell = [tableView dequeueReusableCellWithIdentifier:[MXKTableViewCellWithButton defaultReuseIdentifier]];
-            if (!clearCacheBtnCell)
-            {
-                clearCacheBtnCell = [[MXKTableViewCellWithButton alloc] init];
-            }
-            else
-            {
-                // Fix https://github.com/vector-im/riot-ios/issues/1354
-                clearCacheBtnCell.mxkButton.titleLabel.text = nil;
-            }
-            
-            NSString *btnTitle = [VectorL10n settingsClearCache];
-            [clearCacheBtnCell.mxkButton setTitle:btnTitle forState:UIControlStateNormal];
-            [clearCacheBtnCell.mxkButton setTitle:btnTitle forState:UIControlStateHighlighted];
-            [clearCacheBtnCell.mxkButton setTintColor:ThemeService.shared.theme.tintColor];
-            clearCacheBtnCell.mxkButton.titleLabel.font = [UIFont systemFontOfSize:17];
-            
-            [clearCacheBtnCell.mxkButton removeTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
-            [clearCacheBtnCell.mxkButton addTarget:self action:@selector(clearCache:) forControlEvents:UIControlEventTouchUpInside];
-            clearCacheBtnCell.mxkButton.accessibilityIdentifier = nil;
-            
-            cell = clearCacheBtnCell;
-        }
-        else if (row == ADVANCED_REPORT_BUG_INDEX)
-        {
-            MXKTableViewCellWithButton *reportBugBtnCell = [tableView dequeueReusableCellWithIdentifier:[MXKTableViewCellWithButton defaultReuseIdentifier]];
-            if (!reportBugBtnCell)
-            {
-                reportBugBtnCell = [[MXKTableViewCellWithButton alloc] init];
-            }
-            else
-            {
-                // Fix https://github.com/vector-im/riot-ios/issues/1354
-                reportBugBtnCell.mxkButton.titleLabel.text = nil;
-            }
-
-            NSString *btnTitle = [VectorL10n settingsReportBug];
-            [reportBugBtnCell.mxkButton setTitle:btnTitle forState:UIControlStateNormal];
-            [reportBugBtnCell.mxkButton setTitle:btnTitle forState:UIControlStateHighlighted];
-            [reportBugBtnCell.mxkButton setTintColor:ThemeService.shared.theme.tintColor];
-            reportBugBtnCell.mxkButton.titleLabel.font = [UIFont systemFontOfSize:17];
-
-            [reportBugBtnCell.mxkButton removeTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
-            [reportBugBtnCell.mxkButton addTarget:self action:@selector(reportBug:) forControlEvents:UIControlEventTouchUpInside];
-            reportBugBtnCell.mxkButton.accessibilityIdentifier = nil;
-
-            cell = reportBugBtnCell;
-        }
-    }
-    else if (section == SECTION_TAG_ABOUT)
-    {
-        if (row == ABOUT_ACCEPTABLE_USE_INDEX)
-        {
-            MXKTableViewCell *termAndConditionCell = [self getDefaultTableViewCell:tableView];
-
-            termAndConditionCell.textLabel.text = [VectorL10n settingsAcceptableUse];
-            
-            [termAndConditionCell vc_setAccessoryDisclosureIndicatorWithCurrentTheme];
-            
-            cell = termAndConditionCell;
-        }
-        else if (row == ABOUT_COPYRIGHT_INDEX)
-        {
-            MXKTableViewCell *copyrightCell = [self getDefaultTableViewCell:tableView];
-
-            copyrightCell.textLabel.text = [VectorL10n settingsCopyright];
-            
-            [copyrightCell vc_setAccessoryDisclosureIndicatorWithCurrentTheme];
-            
-            cell = copyrightCell;
-        }
-        else if (row == ABOUT_PRIVACY_INDEX)
-        {
-            MXKTableViewCell *privacyPolicyCell = [self getDefaultTableViewCell:tableView];
-            
-            privacyPolicyCell.textLabel.text = [VectorL10n settingsPrivacyPolicy];
-            
-            [privacyPolicyCell vc_setAccessoryDisclosureIndicatorWithCurrentTheme];
-            
-            cell = privacyPolicyCell;
-        }
-        else if (row == ABOUT_THIRD_PARTY_INDEX)
-        {
-            MXKTableViewCell *thirdPartyCell = [self getDefaultTableViewCell:tableView];
-            
-            thirdPartyCell.textLabel.text = [VectorL10n settingsThirdPartyNotices];
-            
-            [thirdPartyCell vc_setAccessoryDisclosureIndicatorWithCurrentTheme];
-            
-            cell = thirdPartyCell;
-        }
-    }
+//    else if (section == SECTION_TAG_ADVANCED)
+//    {
+//        if (row == ADVANCED_CRASH_REPORT_INDEX)
+//        {
+//            MXKTableViewCellWithLabelAndSwitch* sendCrashReportCell = [self getLabelAndSwitchCell:tableView forIndexPath:indexPath];
+//            
+//            sendCrashReportCell.mxkLabel.text = VectorL10n.settingsAnalyticsAndCrashData;
+//            sendCrashReportCell.mxkSwitch.on = RiotSettings.shared.enableAnalytics;
+//            sendCrashReportCell.mxkSwitch.onTintColor = ThemeService.shared.theme.tintColor;
+//            sendCrashReportCell.mxkSwitch.enabled = YES;
+//            [sendCrashReportCell.mxkSwitch addTarget:self action:@selector(toggleAnalytics:) forControlEvents:UIControlEventTouchUpInside];
+//            
+//            cell = sendCrashReportCell;
+//        }
+//        else if (row == ADVANCED_ENABLE_RAGESHAKE_INDEX)
+//        {
+//            MXKTableViewCellWithLabelAndSwitch* enableRageShakeCell = [self getLabelAndSwitchCell:tableView forIndexPath:indexPath];
+//
+//            enableRageShakeCell.mxkLabel.text = [VectorL10n settingsEnableRageshake];
+//            enableRageShakeCell.mxkSwitch.on = RiotSettings.shared.enableRageShake;
+//            enableRageShakeCell.mxkSwitch.onTintColor = ThemeService.shared.theme.tintColor;
+//            enableRageShakeCell.mxkSwitch.enabled = YES;
+//            [enableRageShakeCell.mxkSwitch addTarget:self action:@selector(toggleEnableRageShake:) forControlEvents:UIControlEventTouchUpInside];
+//
+//            cell = enableRageShakeCell;
+//        }
+//        else if (row == ADVANCED_MARK_ALL_AS_READ_INDEX)
+//        {
+//            MXKTableViewCellWithButton *markAllBtnCell = [tableView dequeueReusableCellWithIdentifier:[MXKTableViewCellWithButton defaultReuseIdentifier]];
+//            if (!markAllBtnCell)
+//            {
+//                markAllBtnCell = [[MXKTableViewCellWithButton alloc] init];
+//            }
+//            else
+//            {
+//                // Fix https://github.com/vector-im/riot-ios/issues/1354
+//                markAllBtnCell.mxkButton.titleLabel.text = nil;
+//            }
+//            
+//            NSString *btnTitle = [VectorL10n settingsMarkAllAsRead];
+//            [markAllBtnCell.mxkButton setTitle:btnTitle forState:UIControlStateNormal];
+//            [markAllBtnCell.mxkButton setTitle:btnTitle forState:UIControlStateHighlighted];
+//            [markAllBtnCell.mxkButton setTintColor:ThemeService.shared.theme.tintColor];
+//            markAllBtnCell.mxkButton.titleLabel.font = [UIFont systemFontOfSize:17];
+//            
+//            [markAllBtnCell.mxkButton removeTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
+//            [markAllBtnCell.mxkButton addTarget:self action:@selector(markAllAsRead:) forControlEvents:UIControlEventTouchUpInside];
+//            markAllBtnCell.mxkButton.accessibilityIdentifier = nil;
+//            
+//            cell = markAllBtnCell;
+//        }
+//        else if (row == ADVANCED_CLEAR_CACHE_INDEX)
+//        {
+//            MXKTableViewCellWithButton *clearCacheBtnCell = [tableView dequeueReusableCellWithIdentifier:[MXKTableViewCellWithButton defaultReuseIdentifier]];
+//            if (!clearCacheBtnCell)
+//            {
+//                clearCacheBtnCell = [[MXKTableViewCellWithButton alloc] init];
+//            }
+//            else
+//            {
+//                // Fix https://github.com/vector-im/riot-ios/issues/1354
+//                clearCacheBtnCell.mxkButton.titleLabel.text = nil;
+//            }
+//            
+//            NSString *btnTitle = [VectorL10n settingsClearCache];
+//            [clearCacheBtnCell.mxkButton setTitle:btnTitle forState:UIControlStateNormal];
+//            [clearCacheBtnCell.mxkButton setTitle:btnTitle forState:UIControlStateHighlighted];
+//            [clearCacheBtnCell.mxkButton setTintColor:ThemeService.shared.theme.tintColor];
+//            clearCacheBtnCell.mxkButton.titleLabel.font = [UIFont systemFontOfSize:17];
+//            
+//            [clearCacheBtnCell.mxkButton removeTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
+//            [clearCacheBtnCell.mxkButton addTarget:self action:@selector(clearCache:) forControlEvents:UIControlEventTouchUpInside];
+//            clearCacheBtnCell.mxkButton.accessibilityIdentifier = nil;
+//            
+//            cell = clearCacheBtnCell;
+//        }
+//        else if (row == ADVANCED_REPORT_BUG_INDEX)
+//        {
+//            MXKTableViewCellWithButton *reportBugBtnCell = [tableView dequeueReusableCellWithIdentifier:[MXKTableViewCellWithButton defaultReuseIdentifier]];
+//            if (!reportBugBtnCell)
+//            {
+//                reportBugBtnCell = [[MXKTableViewCellWithButton alloc] init];
+//            }
+//            else
+//            {
+//                // Fix https://github.com/vector-im/riot-ios/issues/1354
+//                reportBugBtnCell.mxkButton.titleLabel.text = nil;
+//            }
+//
+//            NSString *btnTitle = [VectorL10n settingsReportBug];
+//            [reportBugBtnCell.mxkButton setTitle:btnTitle forState:UIControlStateNormal];
+//            [reportBugBtnCell.mxkButton setTitle:btnTitle forState:UIControlStateHighlighted];
+//            [reportBugBtnCell.mxkButton setTintColor:ThemeService.shared.theme.tintColor];
+//            reportBugBtnCell.mxkButton.titleLabel.font = [UIFont systemFontOfSize:17];
+//
+//            [reportBugBtnCell.mxkButton removeTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
+//            [reportBugBtnCell.mxkButton addTarget:self action:@selector(reportBug:) forControlEvents:UIControlEventTouchUpInside];
+//            reportBugBtnCell.mxkButton.accessibilityIdentifier = nil;
+//
+//            cell = reportBugBtnCell;
+//        }
+//    }
+//    else if (section == SECTION_TAG_ABOUT)
+//    {
+//        if (row == ABOUT_ACCEPTABLE_USE_INDEX)
+//        {
+//            MXKTableViewCell *termAndConditionCell = [self getDefaultTableViewCell:tableView];
+//
+//            termAndConditionCell.textLabel.text = [VectorL10n settingsAcceptableUse];
+//            
+//            [termAndConditionCell vc_setAccessoryDisclosureIndicatorWithCurrentTheme];
+//            
+//            cell = termAndConditionCell;
+//        }
+//        else if (row == ABOUT_COPYRIGHT_INDEX)
+//        {
+//            MXKTableViewCell *copyrightCell = [self getDefaultTableViewCell:tableView];
+//
+//            copyrightCell.textLabel.text = [VectorL10n settingsCopyright];
+//            
+//            [copyrightCell vc_setAccessoryDisclosureIndicatorWithCurrentTheme];
+//            
+//            cell = copyrightCell;
+//        }
+//        else if (row == ABOUT_PRIVACY_INDEX)
+//        {
+//            MXKTableViewCell *privacyPolicyCell = [self getDefaultTableViewCell:tableView];
+//            
+//            privacyPolicyCell.textLabel.text = [VectorL10n settingsPrivacyPolicy];
+//            
+//            [privacyPolicyCell vc_setAccessoryDisclosureIndicatorWithCurrentTheme];
+//            
+//            cell = privacyPolicyCell;
+//        }
+//        else if (row == ABOUT_THIRD_PARTY_INDEX)
+//        {
+//            MXKTableViewCell *thirdPartyCell = [self getDefaultTableViewCell:tableView];
+//            
+//            thirdPartyCell.textLabel.text = [VectorL10n settingsThirdPartyNotices];
+//            
+//            [thirdPartyCell vc_setAccessoryDisclosureIndicatorWithCurrentTheme];
+//            
+//            cell = thirdPartyCell;
+//        }
+//    }
     else if (section == SECTION_TAG_LABS)
     {
         if (row == LABS_ENABLE_RINGING_FOR_GROUP_CALLS_INDEX)
@@ -2677,11 +2678,11 @@ SSOAuthenticationPresenterDelegate>
         UIGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollToDiscoverySection)];
         [view addGestureRecognizer:recognizer];
     }
-    else if (section == SECTION_TAG_DISCOVERY && self.settingsDiscoveryTableViewSection.footerShouldScrollToUserSettings)
-    {
-        UIGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollToUserSettingsSection)];
-        [view addGestureRecognizer:recognizer];
-    }
+//    else if (section == SECTION_TAG_DISCOVERY && self.settingsDiscoveryTableViewSection.footerShouldScrollToUserSettings)
+//    {
+//        UIGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollToUserSettingsSection)];
+//        [view addGestureRecognizer:recognizer];
+//    }
     
     return view;
 }
@@ -2792,19 +2793,19 @@ SSOAuthenticationPresenterDelegate>
         {
             [self openSystemSettingsApp];
         }
-        else if (section == SECTION_TAG_DISCOVERY)
-        {
-            [self.settingsDiscoveryTableViewSection selectRow:row];
-        }
-        else if (section == SECTION_TAG_IDENTITY_SERVER)
-        {
-            switch (row)
-            {
-                case IDENTITY_SERVER_INDEX:
-                    [self showIdentityServerSettingsScreen];
-                    break;
-            }
-        }
+//        else if (section == SECTION_TAG_DISCOVERY)
+//        {
+//            [self.settingsDiscoveryTableViewSection selectRow:row];
+//        }
+//        else if (section == SECTION_TAG_IDENTITY_SERVER)
+//        {
+//            switch (row)
+//            {
+//                case IDENTITY_SERVER_INDEX:
+//                    [self showIdentityServerSettingsScreen];
+//                    break;
+//            }
+//        }
         else if (section == SECTION_TAG_IGNORED_USERS)
         {
             MXSession* session = self.mainSession;
@@ -2867,47 +2868,47 @@ SSOAuthenticationPresenterDelegate>
                 currentAlert = unignorePrompt;
             }
         }
-        else if (section == SECTION_TAG_ABOUT)
-        {
-            if (row == ABOUT_COPYRIGHT_INDEX)
-            {
-                WebViewViewController *webViewViewController = [[WebViewViewController alloc] initWithURL:BuildSettings.applicationCopyrightUrlString];
-                
-                webViewViewController.title = [VectorL10n settingsCopyright];
-                [webViewViewController vc_setLargeTitleDisplayMode:UINavigationItemLargeTitleDisplayModeNever];
-                
-                [self pushViewController:webViewViewController];
-            }
-            else if (row == ABOUT_ACCEPTABLE_USE_INDEX)
-            {
-                WebViewViewController *webViewViewController = [[WebViewViewController alloc] initWithURL:BuildSettings.applicationAcceptableUsePolicyUrlString];
-                
-                webViewViewController.title = [VectorL10n settingsAcceptableUse];
-                [webViewViewController vc_setLargeTitleDisplayMode:UINavigationItemLargeTitleDisplayModeNever];
-                
-                [self pushViewController:webViewViewController];
-            }
-            else if (row == ABOUT_PRIVACY_INDEX)
-            {
-                WebViewViewController *webViewViewController = [[WebViewViewController alloc] initWithURL:BuildSettings.applicationPrivacyPolicyUrlString];
-                
-                webViewViewController.title = [VectorL10n settingsPrivacyPolicy];
-                [webViewViewController vc_setLargeTitleDisplayMode:UINavigationItemLargeTitleDisplayModeNever];
-                
-                [self pushViewController:webViewViewController];
-            }
-            else if (row == ABOUT_THIRD_PARTY_INDEX)
-            {
-                NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"third_party_licenses" ofType:@"html" inDirectory:nil];
-
-                WebViewViewController *webViewViewController = [[WebViewViewController alloc] initWithLocalHTMLFile:htmlFile];
-                
-                webViewViewController.title = [VectorL10n settingsThirdPartyNotices];
-                [webViewViewController vc_setLargeTitleDisplayMode:UINavigationItemLargeTitleDisplayModeNever];
-                
-                [self pushViewController:webViewViewController];
-            }
-        }
+//        else if (section == SECTION_TAG_ABOUT)
+//        {
+//            if (row == ABOUT_COPYRIGHT_INDEX)
+//            {
+//                WebViewViewController *webViewViewController = [[WebViewViewController alloc] initWithURL:BuildSettings.applicationCopyrightUrlString];
+//                
+//                webViewViewController.title = [VectorL10n settingsCopyright];
+//                [webViewViewController vc_setLargeTitleDisplayMode:UINavigationItemLargeTitleDisplayModeNever];
+//                
+//                [self pushViewController:webViewViewController];
+//            }
+//            else if (row == ABOUT_ACCEPTABLE_USE_INDEX)
+//            {
+//                WebViewViewController *webViewViewController = [[WebViewViewController alloc] initWithURL:BuildSettings.applicationAcceptableUsePolicyUrlString];
+//                
+//                webViewViewController.title = [VectorL10n settingsAcceptableUse];
+//                [webViewViewController vc_setLargeTitleDisplayMode:UINavigationItemLargeTitleDisplayModeNever];
+//                
+//                [self pushViewController:webViewViewController];
+//            }
+//            else if (row == ABOUT_PRIVACY_INDEX)
+//            {
+//                WebViewViewController *webViewViewController = [[WebViewViewController alloc] initWithURL:BuildSettings.applicationPrivacyPolicyUrlString];
+//                
+//                webViewViewController.title = [VectorL10n settingsPrivacyPolicy];
+//                [webViewViewController vc_setLargeTitleDisplayMode:UINavigationItemLargeTitleDisplayModeNever];
+//                
+//                [self pushViewController:webViewViewController];
+//            }
+//            else if (row == ABOUT_THIRD_PARTY_INDEX)
+//            {
+//                NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"third_party_licenses" ofType:@"html" inDirectory:nil];
+//
+//                WebViewViewController *webViewViewController = [[WebViewViewController alloc] initWithLocalHTMLFile:htmlFile];
+//                
+//                webViewViewController.title = [VectorL10n settingsThirdPartyNotices];
+//                [webViewViewController vc_setLargeTitleDisplayMode:UINavigationItemLargeTitleDisplayModeNever];
+//                
+//                [self pushViewController:webViewViewController];
+//            }
+//        }
         else if (section == SECTION_TAG_USER_SETTINGS)
         {
             if (row == USER_SETTINGS_PROFILE_PICTURE_INDEX)
@@ -4308,14 +4309,14 @@ SSOAuthenticationPresenterDelegate>
     {
         tableViewCell = [self getDefaultTableViewCell:self.tableView];
     }
-    else if ([tableViewCellClass isEqual:[MXKTableViewCellWithTextView class]])
-    {
-        NSIndexPath *indexPath = [_tableViewSections exactIndexPathForRowTag:forRow sectionTag:SECTION_TAG_DISCOVERY];
-        if (indexPath)
-        {
-            tableViewCell = [self textViewCellForTableView:self.tableView atIndexPath:indexPath];
-        }
-    }
+//    else if ([tableViewCellClass isEqual:[MXKTableViewCellWithTextView class]])
+//    {
+//        NSIndexPath *indexPath = [_tableViewSections exactIndexPathForRowTag:forRow sectionTag:SECTION_TAG_DISCOVERY];
+//        if (indexPath)
+//        {
+//            tableViewCell = [self textViewCellForTableView:self.tableView atIndexPath:indexPath];
+//        }
+//    }
     else if ([tableViewCellClass isEqual:[MXKTableViewCellWithButton class]])
     {
         MXKTableViewCellWithButton *cell = [self.tableView dequeueReusableCellWithIdentifier:[MXKTableViewCellWithButton defaultReuseIdentifier]];
@@ -4335,14 +4336,14 @@ SSOAuthenticationPresenterDelegate>
         
         tableViewCell = cell;
     }
-    else if ([tableViewCellClass isEqual:[MXKTableViewCellWithLabelAndSwitch class]])
-    {
-        NSIndexPath *indexPath = [_tableViewSections exactIndexPathForRowTag:forRow sectionTag:SECTION_TAG_DISCOVERY];
-        if (indexPath)
-        {
-            tableViewCell = [self getLabelAndSwitchCell:self.tableView forIndexPath:indexPath];
-        }
-    }
+//    else if ([tableViewCellClass isEqual:[MXKTableViewCellWithLabelAndSwitch class]])
+//    {
+//        NSIndexPath *indexPath = [_tableViewSections exactIndexPathForRowTag:forRow sectionTag:SECTION_TAG_DISCOVERY];
+//        if (indexPath)
+//        {
+//            tableViewCell = [self getLabelAndSwitchCell:self.tableView forIndexPath:indexPath];
+//        }
+//    }
     
     return tableViewCell;
 }

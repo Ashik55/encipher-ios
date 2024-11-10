@@ -24,6 +24,10 @@ import DesignKit
     var searchBackgroundColor: UIColor { get }
     var searchPlaceholderColor: UIColor { get }
     var searchResultHighlightColor: UIColor { get }
+    
+    
+    var inputTextBackground: UIColor { get }
+    var bubbleBackground: UIColor { get }
 
     var headerBackgroundColor: UIColor { get }
     var headerBorderColor: UIColor { get }

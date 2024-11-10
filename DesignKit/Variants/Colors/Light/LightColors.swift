@@ -13,7 +13,7 @@ import SwiftUI
 /// Light theme colors.
 public class LightColors {
     private static let values = ColorValues(
-        accent: UIColor(rgb:0x0DBD8B),
+        accent: UIColor(rgb:0x005745),
         alert: UIColor(rgb:0xFF4B55),
         primaryContent: UIColor(rgb:0x17191C),
         secondaryContent: UIColor(rgb:0x737D8C),
@@ -25,6 +25,8 @@ public class LightColors {
         tile: UIColor(rgb:0xF3F8FD),
         navigation: UIColor(rgb:0xF4F6FA),
         background: UIColor(rgb:0xFFFFFF),
+        inputTextBackground: UIColor(red: 0x00/255.0, green: 0x57/255.0, blue: 0x45/255.0, alpha: 0.1),
+        bubbleBackground: UIColor(rgb:0xDAECE8),
         ems: UIColor(rgb: 0x7E69FF),
         links: UIColor(rgb: 0x0086E6),
         namesAndAvatars: [

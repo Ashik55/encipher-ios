@@ -12,7 +12,7 @@ import SwiftUI
 /// Dark theme colors.
 public class DarkColors {
     private static let values = ColorValues(
-        accent: UIColor(rgb:0x0DBD8B),
+        accent: UIColor(rgb:0x005745),
         alert: UIColor(rgb:0xFF4B55),
         primaryContent: UIColor(rgb:0xFFFFFF),
         secondaryContent: UIColor(rgb:0xA9B2BC),
@@ -24,6 +24,8 @@ public class DarkColors {
         tile: UIColor(rgb:0x394049),
         navigation: UIColor(rgb:0x21262C),
         background: UIColor(rgb:0x15191E),
+        inputTextBackground: UIColor(red: 0x00/255.0, green: 0x57/255.0, blue: 0x45/255.0, alpha: 0.1),
+        bubbleBackground: UIColor(rgb:0xDAECE8),
         ems: UIColor(rgb: 0x7E69FF),
         links: UIColor(rgb: 0x0086E6),
         namesAndAvatars: [

@@ -48,7 +48,7 @@ struct BorderedInputFieldStyle: TextFieldStyle {
         if !isEnabled, theme.identifier == ThemeIdentifier.dark {
             return theme.colors.quinaryContent
         }
-        return theme.colors.background
+        return theme.colors.inputTextBackground
     }
     
     private var placeholderColor: Color {
@@ -60,7 +60,7 @@ struct BorderedInputFieldStyle: TextFieldStyle {
     }
     
     func _body(configuration: TextField<_Label>) -> some View {
-        let rect = RoundedRectangle(cornerRadius: 8.0)
+        let rect = RoundedRectangle(cornerRadius: 24)
         return configuration
             .font(theme.fonts.callout)
             .foregroundColor(textColor)

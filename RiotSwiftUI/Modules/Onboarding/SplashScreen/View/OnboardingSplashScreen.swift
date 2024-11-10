@@ -30,47 +30,57 @@ struct OnboardingSplashScreen: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack(alignment: .leading) {
-                Spacer()
-                    .frame(height: OnboardingMetrics.spacerHeight(in: geometry))
-                
-                // The main content of the carousel
-                HStack(alignment: .top, spacing: 0) {
-                    // Add a hidden page at the start of the carousel duplicating the content of the last page
-                    OnboardingSplashScreenPage(content: viewModel.viewState.content[pageCount - 1])
-                        .frame(width: geometry.size.width)
+            ZStack {
+                // Background content
+                VStack(alignment: .leading) {
+                    Spacer()
+                        .frame(height: OnboardingMetrics.spacerHeight(in: geometry))
                     
-                    ForEach(0..<pageCount, id: \.self) { index in
-                        OnboardingSplashScreenPage(content: viewModel.viewState.content[index])
+                    // The main content of the carousel
+                    HStack(alignment: .top, spacing: 0) {
+                        OnboardingSplashScreenPage(content: viewModel.viewState.content[pageCount - 1])
                             .frame(width: geometry.size.width)
+                        
+                        ForEach(0..<pageCount, id: \.self) { index in
+                            OnboardingSplashScreenPage(content: viewModel.viewState.content[index])
+                                .frame(width: geometry.size.width)
+                        }
                     }
+                    .offset(x: pageOffset(in: geometry))
+                    
+                    Spacer()
+                    
+                    OnboardingSplashScreenPageIndicator(pageCount: pageCount,
+                                                        pageIndex: viewModel.pageIndex)
+                        .frame(width: geometry.size.width)
+                        .padding(.bottom)
+                    
+                    Spacer()
+
+                    buttons
+                        .frame(width: geometry.size.width)
+                        .padding(.bottom, OnboardingMetrics.actionButtonBottomPadding)
+                        .padding(.bottom, geometry.safeAreaInsets.bottom > 0 ? 0 : 16)
+                    
+                    Spacer()
+                        .frame(height: OnboardingMetrics.spacerHeight(in: geometry))
                 }
-                .offset(x: pageOffset(in: geometry))
+                .frame(maxHeight: .infinity)
+                .background(background.ignoresSafeArea().offset(x: pageOffset(in: geometry)))
+                .gesture(
+                    DragGesture()
+                        .onChanged(handleDragGestureChange)
+                        .onEnded { handleDragGestureEnded($0, viewSize: geometry.size) }
+                )
                 
-                Spacer()
-                
-                OnboardingSplashScreenPageIndicator(pageCount: pageCount,
-                                                    pageIndex: viewModel.pageIndex)
-                    .frame(width: geometry.size.width)
-                    .padding(.bottom)
-                
-                Spacer()
-                
-                buttons
-                    .frame(width: geometry.size.width)
-                    .padding(.bottom, OnboardingMetrics.actionButtonBottomPadding)
-                    .padding(.bottom, geometry.safeAreaInsets.bottom > 0 ? 0 : 16)
-                
-                Spacer()
-                    .frame(height: OnboardingMetrics.spacerHeight(in: geometry))
+                // Background image at the bottom-right corner with custom margins
+                        Image("ic_lock")
+                            .resizable()
+                            .scaledToFit() // Adjusts width according to the aspect ratio
+                            .frame(height: geometry.size.height - 250)
+                            .position(x: geometry.size.width - 160,  y: geometry.size.height - 300)
+                   
             }
-            .frame(maxHeight: .infinity)
-            .background(background.ignoresSafeArea().offset(x: pageOffset(in: geometry)))
-            .gesture(
-                DragGesture()
-                    .onChanged(handleDragGestureChange)
-                    .onEnded { handleDragGestureEnded($0, viewSize: geometry.size) }
-            )
         }
         .accentColor(theme.colors.accent)
         .navigationBarHidden(true)
@@ -84,16 +94,16 @@ struct OnboardingSplashScreen: View {
     /// The main action buttons.
     var buttons: some View {
         VStack(spacing: 12) {
-            Button { viewModel.send(viewAction: .register) } label: {
-                Text(VectorL10n.onboardingSplashRegisterButtonTitle)
+            Button { viewModel.send(viewAction: .login) } label: {
+                Text("Sign In")
             }
             .buttonStyle(PrimaryActionButtonStyle())
             
-            Button { viewModel.send(viewAction: .login) } label: {
-                Text(VectorL10n.onboardingSplashLoginButtonTitle)
-                    .font(theme.fonts.body)
-                    .padding(12)
-            }
+//            Button { viewModel.send(viewAction: .login) } label: {
+//                Text(VectorL10n.onboardingSplashLoginButtonTitle)
+//                    .font(theme.fonts.body)
+//                    .padding(12)
+//            }
         }
         .padding(.horizontal, 16)
         .readableFrame()

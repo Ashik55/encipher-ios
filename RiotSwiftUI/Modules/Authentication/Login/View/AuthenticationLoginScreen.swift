@@ -23,51 +23,53 @@ struct AuthenticationLoginScreen: View {
     @ObservedObject var viewModel: AuthenticationLoginViewModel.Context
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 0) {
-                header
-                    .padding(.top, OnboardingMetrics.topPaddingToNavigationBar)
-                    .padding(.bottom, 28)
-                
-                serverInfo
-                    .padding(.leading, 12)
-                    .padding(.bottom, 16)
-                
-                Rectangle()
-                    .fill(theme.colors.quinaryContent)
-                    .frame(height: 1)
-                    .padding(.bottom, 22)
-                
-                if viewModel.viewState.homeserver.showLoginForm {
-                    loginForm
-                }
+        ZStack(alignment: .top) {
+            // Background image placed using absolute positioning
+               Image("ic_lock")
+                   .resizable()
+                   .scaledToFit()
+                   .frame(height:UIScreen.main.bounds.height - 250)
+                   .position(x: UIScreen.main.bounds.width - 160, y: UIScreen.main.bounds.height - 300) // Fixed position based on screen bounds
+                   .ignoresSafeArea() // To allow the image to go beyond safe areas if needed
+    
+       
+            // Main content overlaid on top of the background image
+            ScrollView {
+                VStack(spacing: 0) {
+                    header
+                        .padding(.top, OnboardingMetrics.topPaddingToNavigationBar)
+                        .padding(.bottom, 28)
 
-                if viewModel.viewState.homeserver.showQRLogin {
-                    qrLoginButton
-                }
-                
-                if viewModel.viewState.homeserver.showLoginForm, viewModel.viewState.showSSOButtons {
-                    Text(VectorL10n.or)
-                        .foregroundColor(theme.colors.secondaryContent)
-                        .padding(.top, 16)
-                }
-                
-                if viewModel.viewState.showSSOButtons {
-                    ssoButtons
-                        .padding(.top, 16)
-                }
+                    serverInfo
+                        .padding(.leading, 12)
+                        .padding(.bottom, 16)
 
-                if !viewModel.viewState.homeserver.showLoginForm, !viewModel.viewState.showSSOButtons {
-                    fallbackButton
+                    Rectangle()
+                        .fill(theme.colors.quinaryContent)
+                        .frame(height: 1)
+                        .padding(.bottom, 22)
+
+                    if viewModel.viewState.homeserver.showLoginForm {
+                        loginForm
+                    }
+
+                    if viewModel.viewState.homeserver.showQRLogin {
+                        qrLoginButton
+                    }
+
+                    // Additional UI components
+                    
                 }
+                .readableFrame()
+                .padding(.horizontal, 16)
+                .padding(.bottom, 16)
             }
-            .readableFrame()
-            .padding(.horizontal, 16)
-            .padding(.bottom, 16)
+            .alert(item: $viewModel.alertInfo) { $0.alert }
+            .accentColor(theme.colors.accent)
         }
         .background(theme.colors.background.ignoresSafeArea())
-        .alert(item: $viewModel.alertInfo) { $0.alert }
-        .accentColor(theme.colors.accent)
+
+         
     }
     
     /// The header containing a Welcome Back title.

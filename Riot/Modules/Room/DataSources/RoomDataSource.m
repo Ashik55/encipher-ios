@@ -397,6 +397,8 @@ const CGFloat kTypingCellHeight = 24;
     if (indexPath.row == self.typingCellIndex)
     {
         MessageTypingCell *cell = [tableView dequeueReusableCellWithIdentifier:MessageTypingCell.defaultReuseIdentifier forIndexPath:indexPath];
+        
+        
         [cell updateWithTheme:ThemeService.shared.theme];
         [cell updateTypingUsers:_currentTypingUsers mediaManager:self.mxSession.mediaManager];
         return cell;
@@ -414,6 +416,19 @@ const CGFloat kTypingCellHeight = 24;
     [self updateKeyVerificationIfNeededForRoomBubbleCellData:roomBubbleCellData];
 
     UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    
+//    // Custom background with rounded corners and color
+//    UIView *roundedBackgroundView = [[UIView alloc] initWithFrame:cell.contentView.bounds];
+//    roundedBackgroundView.backgroundColor =  ThemeService.shared.theme.bubbleBackground; // Set desired background color
+//    roundedBackgroundView.layer.cornerRadius = 10; // Set desired corner radius
+//    roundedBackgroundView.layer.masksToBounds = YES;
+//
+//    // Ensure the background view fits within the cell
+//    roundedBackgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//    [cell.contentView insertSubview:roundedBackgroundView atIndex:0]; // Insert the background below other subviews
+//    
+//    
+    
     
     id<RoomTimelineCellDecorator> cellDecorator = [RoomTimelineConfiguration shared].currentStyle.cellDecorator;
     

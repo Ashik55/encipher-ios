@@ -36,37 +36,51 @@ struct TimelinePollView: View {
     
     @ViewBuilder
     private func pollContent(_ poll: TimelinePollDetails) -> some View {
-        VStack(alignment: .leading, spacing: 16.0) {
-            if poll.representsPollEndedEvent {
-                Text(VectorL10n.pollTimelineEndedText)
-                    .font(theme.fonts.footnote)
-                    .foregroundColor(theme.colors.tertiaryContent)
-            }
+        
+        ZStack(){
             
-            Text(poll.question)
-                .font(theme.fonts.bodySB)
-                .foregroundColor(theme.colors.primaryContent) +
-                Text(editedText(poll))
-                .font(theme.fonts.footnote)
-                .foregroundColor(theme.colors.secondaryContent)
-            
-            VStack(spacing: 24.0) {
-                ForEach(poll.answerOptions) { answerOption in
-                    TimelinePollAnswerOptionButton(poll: poll, answerOption: answerOption) {
-                        viewModel.send(viewAction: .selectAnswerOptionWithIdentifier(answerOption.id))
+                VStack(alignment: .leading, spacing: 16.0) {
+                    if poll.representsPollEndedEvent {
+                        Text(VectorL10n.pollTimelineEndedText)
+                            .font(theme.fonts.footnote)
+                            .foregroundColor(theme.colors.tertiaryContent)
+                           
                     }
+                    
+                    Text(poll.question)
+                        .font(theme.fonts.bodySB)
+                        .foregroundColor(theme.colors.primaryContent) +
+                        Text(editedText(poll))
+                        .font(theme.fonts.footnote)
+                        .foregroundColor(theme.colors.secondaryContent)
+                        
+                    
+                    VStack(spacing: 24.0) {
+                        ForEach(poll.answerOptions) { answerOption in
+                            TimelinePollAnswerOptionButton(poll: poll, answerOption: answerOption) {
+                                viewModel.send(viewAction: .selectAnswerOptionWithIdentifier(answerOption.id))
+                            }
+                        }
+                    }
+                    .disabled(poll.closed)
+                    .fixedSize(horizontal: false, vertical: true)
+//                    .padding()
+
+                    Text(totalVotesString(poll))
+                        .lineLimit(2)
+                        .font(theme.fonts.footnote)
+                        .foregroundColor(theme.colors.tertiaryContent)
                 }
-            }
-            .disabled(poll.closed)
-            .fixedSize(horizontal: false, vertical: true)
-            
-            Text(totalVotesString(poll))
-                .lineLimit(2)
-                .font(theme.fonts.footnote)
-                .foregroundColor(theme.colors.tertiaryContent)
+//                .padding([.horizontal, .top], 2.0)
+//                .padding([.bottom])
+              
         }
-        .padding([.horizontal, .top], 2.0)
-        .padding([.bottom])
+        .padding()
+        .background(
+            theme.colors.bubbleBackground.cornerRadius(12) // Adjust the radius as needed
+        )
+        
+    
     }
     
     private func totalVotesString(_ poll: TimelinePollDetails) -> String {

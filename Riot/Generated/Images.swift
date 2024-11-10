@@ -354,6 +354,7 @@ internal class Asset: NSObject {
     internal static let voiceBroadcastTileLive = ImageAsset(name: "voice_broadcast_tile_live")
     internal static let voiceBroadcastTileMic = ImageAsset(name: "voice_broadcast_tile_mic")
     internal static let voiceBroadcastTimeLeft = ImageAsset(name: "voice_broadcast_time_left")
+    internal static let icLock = ImageAsset(name: "ic_lock")
     internal static let launchScreenLogo = ImageAsset(name: "launch_screen_logo")
   }
   @objcMembers
@@ -361,6 +362,7 @@ internal class Asset: NSObject {
     internal static let cancel = ImageAsset(name: "cancel")
     internal static let e2eVerified = ImageAsset(name: "e2e_verified")
     internal static let horizontalLogo = ImageAsset(name: "horizontal_logo")
+    internal static let icLock = ImageAsset(name: "ic_lock")
     internal static let radioButtonDefault = ImageAsset(name: "radio-button-default")
     internal static let radioButtonSelected = ImageAsset(name: "radio-button-selected")
   }

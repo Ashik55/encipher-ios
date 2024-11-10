@@ -72,8 +72,8 @@ struct RoundedBorderTextField: View {
                 .accessibilityLabel(text.isEmpty ? placeHolder : "")
             }
             .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: text.isEmpty ? 8 : 0))
-            .background(RoundedRectangle(cornerRadius: 8).fill(theme.colors.background))
-            .overlay(RoundedRectangle(cornerRadius: 8).stroke(borderColor, lineWidth: borderWidth))
+            .background(RoundedRectangle(cornerRadius: 24).fill(theme.colors.inputTextBackground))
+            .overlay(RoundedRectangle(cornerRadius: 24).stroke(borderColor, lineWidth: borderWidth))
 
             if let footerText = self.footerText {
                 Text(footerText)

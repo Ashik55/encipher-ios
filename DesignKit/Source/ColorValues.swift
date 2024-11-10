@@ -36,6 +36,8 @@ public struct ColorValues: Colors {
     public let navigation: UIColor
     
     public let background: UIColor
+    public let inputTextBackground: UIColor
+    public let bubbleBackground: UIColor
     
     public let ems: UIColor
     

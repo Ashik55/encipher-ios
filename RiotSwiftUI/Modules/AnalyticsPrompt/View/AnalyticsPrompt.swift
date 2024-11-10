@@ -29,8 +29,8 @@ struct AnalyticsPrompt: View {
     /// The text that explains what analytics will do.
     private var messageText: some View {
         VStack {
-            Text("\(viewModel.viewState.promptType.message)\n")
-            
+            Text("Help us to identify & improve Encipher by sharing anonymous usage data\n")
+//            Text("\(viewModel.viewState.promptType.message)\n")
             InlineTextButton(viewModel.viewState.promptType.mainTermsString,
                              tappableText: viewModel.viewState.promptType.termsLinkString) {
                 viewModel.send(viewAction: .openTermsURL)
@@ -57,6 +57,9 @@ struct AnalyticsPrompt: View {
     private var mainContent: some View {
         VStack {
             Image(uiImage: Asset.Images.analyticsLogo.image)
+                .resizable()
+                .scaledToFit() // Adjusts width according to the aspect ratio
+                .frame(height: 80)
                 .padding(.bottom, 25)
             
             Text(VectorL10n.analyticsPromptTitle(AppInfo.current.displayName))
@@ -122,6 +125,14 @@ struct AnalyticsPrompt: View {
                 Spacer()
                     .frame(height: OnboardingMetrics.spacerHeight(in: geometry))
             }
+            .background(
+                // Background image at the bottom-right corner with custom margins
+                Image("ic_lock")
+                    .resizable()
+                    .scaledToFit() // Adjusts width according to the aspect ratio
+                    .frame(height: geometry.size.height - 250)
+                    .position(x: geometry.size.width - 160,  y: geometry.size.height - 300)
+            )
             .background(theme.colors.background.ignoresSafeArea())
             .accentColor(theme.colors.accent)
         }
