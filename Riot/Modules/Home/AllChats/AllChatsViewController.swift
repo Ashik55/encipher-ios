@@ -64,6 +64,9 @@ class AllChatsViewController: HomeViewController {
     private var theme: Theme {
         ThemeService.shared().theme
     }
+    private let floatingButtonSize: CGFloat = 60
+    private var floatingSpacesButton = UIButton(type: .system)
+    private var floatingAllChatsEditButton = UIButton(type: .system)
 
     @IBOutlet private var toolbar: UIToolbar!
     private var isToolbarHidden: Bool = false {
@@ -540,50 +543,47 @@ class AllChatsViewController: HomeViewController {
     
     private func setupFloatingButtons(with menu: UIMenu) {
  
-        let floatingButtonSize: CGFloat = 60
-        let spacesButton = UIButton(type: .system)
-        spacesButton.accessibilityLabel = VectorL10n.spaceSelectorTitle
-        spacesButton.addTarget(self, action: #selector(showSpaceSelectorAction(sender:)), for: .touchUpInside)
-        spacesButton.setImage(Asset.Images.allChatsSpacesIcon.image.withRenderingMode(.alwaysTemplate), for: .normal)
-        spacesButton.tintColor = theme.colors.accent
-        spacesButton.layer.cornerRadius = floatingButtonSize / 2
-        spacesButton.clipsToBounds = false
-        spacesButton.backgroundColor = .white
-        spacesButton.layer.shadowColor = UIColor.black.cgColor
-        spacesButton.layer.shadowOpacity = 0.2
-        spacesButton.layer.shadowOffset = CGSize(width: 0, height: 1)
-        spacesButton.layer.shadowRadius = 2
-
-        let allChatsEditIcon = UIButton(type: .system)
-        allChatsEditIcon.menu = menu
-        allChatsEditIcon.showsMenuAsPrimaryAction = true
-        allChatsEditIcon.setImage(Asset.Images.allChatsEditIcon.image.withRenderingMode(.alwaysTemplate), for: .normal)
-        allChatsEditIcon.tintColor = .white
-        allChatsEditIcon.layer.cornerRadius = floatingButtonSize / 2
-        allChatsEditIcon.clipsToBounds = false
-        allChatsEditIcon.backgroundColor = theme.colors.accent
-        allChatsEditIcon.layer.shadowColor = UIColor.black.cgColor
-        allChatsEditIcon.layer.shadowOpacity = 0.2
-        allChatsEditIcon.layer.shadowOffset = CGSize(width: 0, height: 2)
-        allChatsEditIcon.layer.shadowRadius = 1
+        floatingSpacesButton.accessibilityLabel = VectorL10n.spaceSelectorTitle
+        floatingSpacesButton.addTarget(self, action: #selector(showSpaceSelectorAction(sender:)), for: .touchUpInside)
+        floatingSpacesButton.setImage(Asset.Images.allChatsSpacesIcon.image.withRenderingMode(.alwaysTemplate), for: .normal)
+        floatingSpacesButton.tintColor = theme.colors.accent
+        floatingSpacesButton.layer.cornerRadius = floatingButtonSize / 2
+        floatingSpacesButton.clipsToBounds = false
+        floatingSpacesButton.backgroundColor = .white
+        floatingSpacesButton.layer.shadowColor = UIColor.black.cgColor
+        floatingSpacesButton.layer.shadowOpacity = 0.2
+        floatingSpacesButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+        floatingSpacesButton.layer.shadowRadius = 2
+      
+        floatingAllChatsEditButton.menu = menu
+        floatingAllChatsEditButton.showsMenuAsPrimaryAction = true
+        floatingAllChatsEditButton.setImage(Asset.Images.allChatsEditIcon.image.withRenderingMode(.alwaysTemplate), for: .normal)
+        floatingAllChatsEditButton.tintColor = .white
+        floatingAllChatsEditButton.layer.cornerRadius = floatingButtonSize / 2
+        floatingAllChatsEditButton.clipsToBounds = false
+        floatingAllChatsEditButton.backgroundColor = theme.colors.accent
+        floatingAllChatsEditButton.layer.shadowColor = UIColor.black.cgColor
+        floatingAllChatsEditButton.layer.shadowOpacity = 0.2
+        floatingAllChatsEditButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        floatingAllChatsEditButton.layer.shadowRadius = 1
 
         
-        [spacesButton, allChatsEditIcon].forEach { button in
+        [floatingSpacesButton, floatingAllChatsEditButton].forEach { button in
             button.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview(button)
         }
 
        
         NSLayoutConstraint.activate([
-            allChatsEditIcon.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            allChatsEditIcon.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
-            allChatsEditIcon.widthAnchor.constraint(equalToConstant: floatingButtonSize),
-            allChatsEditIcon.heightAnchor.constraint(equalToConstant: floatingButtonSize),
+            floatingAllChatsEditButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            floatingAllChatsEditButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
+            floatingAllChatsEditButton.widthAnchor.constraint(equalToConstant: floatingButtonSize),
+            floatingAllChatsEditButton.heightAnchor.constraint(equalToConstant: floatingButtonSize),
 
-            spacesButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            spacesButton.bottomAnchor.constraint(equalTo: allChatsEditIcon.topAnchor, constant: -10),
-            spacesButton.widthAnchor.constraint(equalToConstant: floatingButtonSize),
-            spacesButton.heightAnchor.constraint(equalToConstant: floatingButtonSize)
+            floatingSpacesButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            floatingSpacesButton.bottomAnchor.constraint(equalTo: floatingAllChatsEditButton.topAnchor, constant: -10),
+            floatingSpacesButton.widthAnchor.constraint(equalToConstant: floatingButtonSize),
+            floatingSpacesButton.heightAnchor.constraint(equalToConstant: floatingButtonSize)
         ])
     }
 
