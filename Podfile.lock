@@ -95,8 +95,8 @@ DEPENDENCIES:
   - KeychainAccess (~> 4.2.2)
   - KTCenterFlowLayout (~> 1.3.1)
   - libPhoneNumber-iOS (~> 0.9.13)
-  - MatrixSDK (from `matrix-ios-sdk/MatrixSDK.podspec`)
-  - MatrixSDK/JingleCallStack (from `matrix-ios-sdk/MatrixSDK.podspec`)
+  - MatrixSDK (from `https://github.com/matrix-org/matrix-ios-sdk.git`, branch `develop`)
+  - MatrixSDK/JingleCallStack (from `https://github.com/matrix-org/matrix-ios-sdk.git`, branch `develop`)
   - ReadMoreTextView (~> 3.0.1)
   - Reusable (~> 4.1)
   - Sentry (~> 8.35.0)
@@ -155,7 +155,13 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   MatrixSDK:
-    :path: matrix-ios-sdk/MatrixSDK.podspec
+    :branch: develop
+    :git: https://github.com/matrix-org/matrix-ios-sdk.git
+
+CHECKOUT OPTIONS:
+  MatrixSDK:
+    :commit: 07aa62ed1acc9f91507c709471f0e1656de0b4fd
+    :git: https://github.com/matrix-org/matrix-ios-sdk.git
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
@@ -198,6 +204,6 @@ SPEC CHECKSUMS:
   zxcvbn-ios: fef98b7c80f1512ff0eec47ac1fa399fc00f7e3c
   ZXingObjC: 8898711ab495761b2dbbdec76d90164a6d7e14c5
 
-PODFILE CHECKSUM: 0ff07ef77f4dd4dac9134a91e690340a934bff9f
+PODFILE CHECKSUM: 436f7274e56effa4185025d4b28b03b76397f2ce
 
 COCOAPODS: 1.15.2

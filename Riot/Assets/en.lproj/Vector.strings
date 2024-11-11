@@ -17,7 +17,7 @@
 
 // String for App Store
 "store_short_description" = "Secure decentralised chat/VoIP";
-"store_full_description" = "Element is a new type of messenger and collaboration app that:\n\n1. Puts you in control to preserve your privacy\n2. Lets you communicate with anyone in the Matrix network, and even beyond by integrating with apps such as Slack\n3. Protects you from advertising, datamining, backdoors and walled gardens\n4. Secures you through end-to-end encryption, with cross-signing to verify others\n\nElement is completely different from other messaging and collaboration apps because it is decentralised and open source.\n\nElement lets you self-host - or choose a host - so that you have privacy, ownership and control of your data and conversations. It gives you access to an open network; so you’re not just stuck speaking to other Element users only. And it is very secure.\n\nElement is able to do all this because it operates on Matrix - the standard for open, decentralised communication. \n\nElement puts you in control by letting you choose who hosts your conversations. From the Element app, you can choose to host in different ways:\n\n1. Get a free account on the matrix.org public server\n2. Self-host your account by running a server on your own hardware\n3. Sign up for an account on a custom server by simply subscribing to the Element Matrix Services hosting platform\n\nWhy choose Element?\n\nOWN YOUR DATA: You decide where to keep your data and messages. You own it and control it, not some MEGACORP that mines your data or gives access to third parties.\n\nOPEN MESSAGING AND COLLABORATION: You can chat with anyone else in the Matrix network, whether they’re using Element or another Matrix app, and even if they are using a different messaging system of the likes of Slack, IRC or XMPP.\n\nSUPER-SECURE: Real end-to-end encryption (only those in the conversation can decrypt messages), and cross-signing to verify the devices of conversation participants.\n\nCOMPLETE COMMUNICATION: Messaging, voice and video calls, file sharing, screen sharing and a whole bunch of integrations, bots and widgets. Build rooms, communities, stay in touch and get things done.\n\nEVERYWHERE YOU ARE: Stay in touch wherever you are with fully synchronised message history across all your devices and on the web at https://element.io/app.";
+"store_full_description" = "Element is a new type of messenger and collaboration app that:\n\n1. Puts you in control to preserve your privacy\n2. Lets you communicate with anyone in the Encipher network, and even beyond by integrating with apps such as Slack\n3. Protects you from advertising, datamining, backdoors and walled gardens\n4. Secures you through end-to-end encryption, with cross-signing to verify others\n\nElement is completely different from other messaging and collaboration apps because it is decentralised and open source.\n\nElement lets you self-host - or choose a host - so that you have privacy, ownership and control of your data and conversations. It gives you access to an open network; so you’re not just stuck speaking to other Element users only. And it is very secure.\n\nElement is able to do all this because it operates on Encipher - the standard for open, decentralised communication. \n\nElement puts you in control by letting you choose who hosts your conversations. From the Element app, you can choose to host in different ways:\n\n1. Get a free account on the Encipher.org public server\n2. Self-host your account by running a server on your own hardware\n3. Sign up for an account on a custom server by simply subscribing to the Element Encipher Services hosting platform\n\nWhy choose Element?\n\nOWN YOUR DATA: You decide where to keep your data and messages. You own it and control it, not some MEGACORP that mines your data or gives access to third parties.\n\nOPEN MESSAGING AND COLLABORATION: You can chat with anyone else in the Encipher network, whether they’re using Element or another Encipher app, and even if they are using a different messaging system of the likes of Slack, IRC or XMPP.\n\nSUPER-SECURE: Real end-to-end encryption (only those in the conversation can decrypt messages), and cross-signing to verify the devices of conversation participants.\n\nCOMPLETE COMMUNICATION: Messaging, voice and video calls, file sharing, screen sharing and a whole bunch of integrations, bots and widgets. Build rooms, communities, stay in touch and get things done.\n\nEVERYWHERE YOU ARE: Stay in touch wherever you are with fully synchronised message history across all your devices and on the web at https://element.io/app.";
 "store_promotional_text" = "Privacy-preserving chat and collaboration app, on an open network. Decentralised to put you in control. No datamining, no backdoors and no third party access.";
 
 // Titles
@@ -104,7 +104,7 @@
 "onboarding_splash_page_1_title" = "Own your conversations.";
 "onboarding_splash_page_1_message" = "Secure and independent communication that gives you the same level of privacy as a face-to-face conversation in your own home.";
 "onboarding_splash_page_2_title" = "You’re in control.";
-"onboarding_splash_page_2_message" = "Choose where your conversations are kept, giving you control and independence. Connected via Matrix.";
+"onboarding_splash_page_2_message" = "Choose where your conversations are kept, giving you control and independence. Connected via Encipher.";
 "onboarding_splash_page_3_title" = "Secure messaging.";
 "onboarding_splash_page_3_message" = "End-to-end encrypted and no phone number required. No ads or datamining.";
 "onboarding_splash_page_4_title_no_pun" = "Messaging for your team.";
@@ -122,7 +122,7 @@
 "onboarding_use_case_existing_server_button" = "Connect to server";
 
 "onboarding_congratulations_title" = "Congratulations!";
-/* The placeholder string contains the user's matrix ID */
+/* The placeholder string contains the user's Encipher ID */
 "onboarding_congratulations_message" = "Your account %@ has been created";
 "onboarding_congratulations_personalize_button" = "Personalise profile";
 "onboarding_congratulations_home_button" = "Take me home";
@@ -148,7 +148,7 @@
 "authentication_registration_title" = "Create your account";
 "authentication_registration_username" = "Username";
 "authentication_registration_username_footer" = "You can’t change this later";
-/* The placeholder will show the full Matrix ID that has been entered. */
+/* The placeholder will show the full Encipher ID that has been entered. */
 "authentication_registration_username_footer_available" = "Others can discover you %@";
 "authentication_registration_password_footer" = "Must be 8 characters or more";
 "authentication_server_info_title" = "Where your conversations will live";
@@ -279,7 +279,7 @@
 "auth_optional_phone_placeholder" = "Phone number (optional)";
 "auth_phone_placeholder" = "Phone number";
 "auth_repeat_password_placeholder" = "Repeat password";
-"auth_repeat_new_password_placeholder" = "Confirm your new Matrix account password";
+"auth_repeat_new_password_placeholder" = "Confirm your new Encipher account password";
 "auth_home_server_placeholder" = "URL (e.g. https://matrix.org)";
 "auth_identity_server_placeholder" = "URL (e.g. https://vector.im)";
 "auth_invalid_login_param" = "Incorrect username and/or password";
@@ -296,13 +296,13 @@
 "auth_missing_email_or_phone" = "Missing email address or phone number";
 "auth_email_in_use" = "This email address is already in use";
 "auth_phone_in_use" = "This phone number is already in use";
-"auth_email_is_required" = "No identity server is configured so you cannot add an email address in order to reset your Matrix account password in the future.";
-"auth_phone_is_required" = "No identity server is configured so you cannot add a phone number in order to reset your Matrix account password in the future.";
+"auth_email_is_required" = "No identity server is configured so you cannot add an email address in order to reset your Encipher account password in the future.";
+"auth_phone_is_required" = "No identity server is configured so you cannot add a phone number in order to reset your Encipher account password in the future.";
 "auth_untrusted_id_server" = "The identity server is not trusted";
 "auth_password_dont_match" = "Passwords don't match";
 "auth_username_in_use" = "Username in use";
-"auth_forgot_password" = "Forgot Matrix account password?";
-"auth_forgot_password_error_no_configured_identity_server" = "No identity server is configured: add one to reset your Matrix account password.";
+"auth_forgot_password" = "Forgot Encipher account password?";
+"auth_forgot_password_error_no_configured_identity_server" = "No identity server is configured: add one to reset your Encipher account password.";
 "auth_email_not_found" = "Failed to send email: This email address was not found";
 "auth_use_server_options" = "Use custom server options (advanced)";
 "auth_email_validation_message" = "Please check your email to continue registration";
@@ -310,15 +310,15 @@
 "auth_msisdn_validation_message" = "We\'ve sent an SMS with an activation code. Please enter this code below.";
 "auth_msisdn_validation_error" = "Unable to verify phone number.";
 "auth_recaptcha_message" = "This homeserver would like to make sure you are not a robot";
-"auth_reset_password_message" = "To reset your Matrix account password, enter the email address linked to your account:";
+"auth_reset_password_message" = "To reset your Encipher account password, enter the email address linked to your account:";
 "auth_reset_password_missing_email" = "The email address linked to your account must be entered.";
 "auth_reset_password_missing_password" = "A new password must be entered.";
 "auth_reset_password_email_validation_message" = "An email has been sent to %@. Once you've followed the link it contains, click below.";
 "auth_reset_password_next_step_button" = "I have verified my email address";
 "auth_reset_password_error_unauthorized" = "Failed to verify email address: make sure you clicked the link in the email";
-"auth_reset_password_error_not_found" = "Your email address does not appear to be associated with a Matrix ID on this homeserver.";
-"auth_reset_password_error_is_required" = "No identity server is configured: add one in server options to reset your Matrix account password.";
-"auth_reset_password_success_message" = "Your Matrix account password has been reset.\n\nYou have been logged out of all sessions and will no longer receive push notifications. To re-enable notifications, re-log in on each device.";
+"auth_reset_password_error_not_found" = "Your email address does not appear to be associated with a Encipher ID on this homeserver.";
+"auth_reset_password_error_is_required" = "No identity server is configured: add one in server options to reset your Encipher account password.";
+"auth_reset_password_success_message" = "Your Encipher account password has been reset.\n\nYou have been logged out of all sessions and will no longer receive push notifications. To re-enable notifications, re-log in on each device.";
 "auth_add_email_and_phone_warning" = "Registration with email and phone number at once is not supported yet until the api exists. Only the phone number will be taken into account. You may add your email to your profile in settings.";
 "auth_accept_policies" = "Please review and accept the policies of this homeserver:";
 "auth_autodiscover_invalid_response" = "Invalid homeserver discovery response";
@@ -367,7 +367,7 @@
 "room_creation_dm_error" = "We couldn't create your DM. Please check the users you want to invite and try again.";
 "room_creation_only_one_email_invite" = "You can only invite one email at a time";
 "room_creation_user_not_found_prompt_title" = "Confirmation";
-"room_creation_user_not_found_prompt_message" = "Unable to find profiles for this Matrix ID. Would you like to start a DM anyway?";
+"room_creation_user_not_found_prompt_message" = "Unable to find profiles for this Encipher ID. Would you like to start a DM anyway?";
 "room_creation_user_not_found_prompt_invite_action" = "Start DM anyway";
 
 // Room recents
@@ -381,7 +381,7 @@
 "room_recents_invites_section" = "INVITES";
 "room_recents_suggested_rooms_section" = "SUGGESTED ROOMS";
 "room_recents_start_chat_with" = "Start chat";
-"room_recents_create_empty_room" = "Create room";
+"room_recents_create_empty_room" = "Create Group";
 "room_recents_join_room" = "Join room";
 "room_recents_join_room_title" = "Join a room";
 "room_recents_join_room_prompt" = "Type a room id or a room alias";
@@ -462,13 +462,13 @@ Tap the + to start adding people.";
 "room_participants_invite_prompt_title" = "Confirmation";
 "room_participants_invite_prompt_msg" = "Are you sure you want to invite %@ to this chat?";
 "room_participants_invite_prompt_to_msg" = "Are you sure you want to invite %@ to %@?";
-"room_participants_invite_unknown_participant_prompt_to_msg" = "Unable to find profiles for this Matrix ID. Are you sure you want to invite %@ to %@?";
+"room_participants_invite_unknown_participant_prompt_to_msg" = "Unable to find profiles for this Encipher ID. Are you sure you want to invite %@ to %@?";
 "room_participants_invite_anyway" = "Invite anyway";
 "room_participants_filter_room_members" = "Filter room members";
 "room_participants_filter_room_members_for_dm" = "Filter members";
 "room_participants_invite_another_user" = "Search / invite by User ID, Name or email";
 "room_participants_invite_malformed_id_title" = "Invite Error";
-"room_participants_invite_malformed_id" = "Malformed ID. Should be an email address or a Matrix ID like '@localpart:domain'";
+"room_participants_invite_malformed_id" = "Malformed ID. Should be an email address or a Encipher ID like '@localpart:domain'";
 "room_participants_invited_section" = "INVITED";
 "room_participants_start_new_chat_error_using_user_email_without_identity_server" = "No identity server is configured so you cannot start a chat with a contact using an email.";
 
@@ -649,7 +649,7 @@ Tap the + to start adding people.";
 "threads_empty_show_all_threads" = "Show all threads";
 "message_from_a_thread" = "From a thread";
 "threads_notice_title" = "Threads no longer experimental 🎉";
-"threads_notice_information" = "All threads created during the experimental period will now be <b>rendered as regular replies</b>.<br/><br/>This will be a one-off transition, as threads are now part of the Matrix specification.";
+"threads_notice_information" = "All threads created during the experimental period will now be <b>rendered as regular replies</b>.<br/><br/>This will be a one-off transition, as threads are now part of the Encipher specification.";
 "threads_notice_done" = "Got it";
 "threads_beta_title" = "Threads";
 "threads_beta_information" = "Keep discussions organised with threads.\n\nThreads help keep your conversations on-topic and easy to track. ";
@@ -846,12 +846,12 @@ Tap the + to start adding people.";
 "settings_old_password" = "Old password";
 "settings_new_password" = "New password";
 "settings_confirm_password" = "Confirm password";
-"settings_fail_to_update_password" = "Fail to update Matrix account password";
-"settings_password_updated" = "Your Matrix account password has been updated";
+"settings_fail_to_update_password" = "Fail to update Encipher account password";
+"settings_password_updated" = "Your Encipher account password has been updated";
 
 "settings_add_3pid_password_title_email" = "Add email address";
 "settings_add_3pid_password_title_msidsn" = "Add phone number";
-"settings_add_3pid_password_message" = "To continue, please enter your Matrix account password";
+"settings_add_3pid_password_message" = "To continue, please enter your Encipher account password";
 "settings_add_3pid_invalid_password_message" = "Invalid credentials";
 
 "settings_crypto_device_name" = "Session name: ";
@@ -923,7 +923,7 @@ Tap the + to start adding people.";
 "security_settings_title" = "Security";
 "security_settings_crypto_sessions" = "MY SESSIONS";
 "security_settings_crypto_sessions_loading" = "Loading sessions…";
-"security_settings_crypto_sessions_description_2" = "If you don’t recognise a login, change your Matrix account password and reset Secure Backup.";
+"security_settings_crypto_sessions_description_2" = "If you don’t recognise a login, change your Encipher account password and reset Secure Backup.";
 
 "security_settings_secure_backup" = "SECURE BACKUP";
 "security_settings_secure_backup_description" =  "Back up your encryption keys with your account data in case you lose access to your sessions. Your keys will be secured with a unique Security Key.";
@@ -955,8 +955,8 @@ Tap the + to start adding people.";
 "security_settings_complete_security_alert_title" = "Complete security";
 "security_settings_complete_security_alert_message" = "You should complete security on your current session first.";
 
-"security_settings_coming_soon" = "Sorry. This action is not available on %@ iOS yet. Please use another Matrix client to set it up. %@ iOS will use it.";
-"security_settings_user_password_description" = "Confirm your identity by entering your Matrix account password";
+"security_settings_coming_soon" = "Sorry. This action is not available on %@ iOS yet. Please use another Encipher client to set it up. %@ iOS will use it.";
+"security_settings_user_password_description" = "Confirm your identity by entering your Encipher account password";
 
 // Manage session
 "manage_session_title" = "Manage session";
@@ -1154,7 +1154,7 @@ Tap the + to start adding people.";
 "group_participants_filter_members" = "Filter community members";
 "group_participants_invite_another_user" = "Search / invite by User ID or Name";
 "group_participants_invite_malformed_id_title" = "Invite Error";
-"group_participants_invite_malformed_id" = "Malformed ID. Should be a Matrix ID like '@localpart:domain'";
+"group_participants_invite_malformed_id" = "Malformed ID. Should be a Encipher ID like '@localpart:domain'";
 "group_participants_invited_section" = "INVITED";
 
 // Group rooms
@@ -1177,7 +1177,7 @@ Tap the + to start adding people.";
 "directory_title" = "Directory";
 "directory_server_picker_title" = "Select a directory";
 "directory_server_all_rooms" = "All rooms on %@ server";
-"directory_server_all_native_rooms" = "All native Matrix rooms";
+"directory_server_all_native_rooms" = "All native Encipher rooms";
 "directory_server_type_homeserver" = "Type a homeserver to list public rooms from";
 "directory_server_placeholder" = "matrix.org";
 
@@ -1390,7 +1390,7 @@ Tap the + to start adding people.";
 "deactivate_account_informations_part2_emphasize" = "This action is irreversible.";
 "deactivate_account_informations_part3" = "\n\nDeactivating your account ";
 "deactivate_account_informations_part4_emphasize" = "does not by default cause us to forget messages you have sent. ";
-"deactivate_account_informations_part5" = "If you would like us to forget your messages, please tick the box below\n\nMessage visibility in Matrix is similar to email. Our forgetting your messages means that messages you have sent will not be shared with any new or unregistered users, but registered users who already have access to these messages will still have access to their copy.";
+"deactivate_account_informations_part5" = "If you would like us to forget your messages, please tick the box below\n\nMessage visibility in Encipher is similar to email. Our forgetting your messages means that messages you have sent will not be shared with any new or unregistered users, but registered users who already have access to these messages will still have access to their copy.";
 
 "deactivate_account_forget_messages_information_part1" = "Please forget all messages I have sent when my account is deactivated (";
 "deactivate_account_forget_messages_information_part2_emphasize" = "Warning";
@@ -1399,7 +1399,7 @@ Tap the + to start adding people.";
 "deactivate_account_validate_action" = "Deactivate account";
 
 "deactivate_account_password_alert_title" = "Deactivate Account";
-"deactivate_account_password_alert_message" = "To continue, please enter your Matrix account password";
+"deactivate_account_password_alert_message" = "To continue, please enter your Encipher account password";
 
 // Re-request confirmation dialog
 "rerequest_keys_alert_title" = "Request Sent";
@@ -1455,7 +1455,7 @@ Tap the + to start adding people.";
 // Passphrase
 
 "key_backup_setup_passphrase_title" = "Secure your backup with a Security Phrase";
-"key_backup_setup_passphrase_info" = "We'll store an encrypted copy of your keys on our server. Protect your backup with a phrase to keep it secure.\n\nFor maximum security, this should be different from your Matrix account password.";
+"key_backup_setup_passphrase_info" = "We'll store an encrypted copy of your keys on our server. Protect your backup with a phrase to keep it secure.\n\nFor maximum security, this should be different from your Encipher account password.";
 "key_backup_setup_passphrase_passphrase_title" = "Enter";
 "key_backup_setup_passphrase_passphrase_placeholder" = "Enter phrase";
 "key_backup_setup_passphrase_passphrase_valid" = "Great!";
@@ -1600,7 +1600,7 @@ Tap the + to start adding people.";
 "device_verification_self_verify_wait_title" = "Complete security";
 "device_verification_self_verify_wait_new_sign_in_title" = "Verify this login";
 "device_verification_self_verify_wait_information" = "Verify this session from one of your other sessions, granting it access to encrypted messages.\n\nUse the latest %@ on your other devices:";
-"device_verification_self_verify_wait_additional_information" = "This works with %@ and other cross-signing capable Matrix clients.";
+"device_verification_self_verify_wait_additional_information" = "This works with %@ and other cross-signing capable Encipher clients.";
 "device_verification_self_verify_open_on_other_device_title" = "Open %@ on your other device";
 "device_verification_self_verify_open_on_other_device_information" = "You need to verify this session in order to read your secure message history.\n\nOpen Element on one of your other devices and follow the instructions.";
 "device_verification_self_verify_wait_recover_secrets_without_passphrase" = "Use Security Key";
@@ -1890,7 +1890,7 @@ Tap the + to start adding people.";
 
 "secrets_setup_recovery_passphrase_title" = "Set a Security Phrase";
 "secrets_setup_recovery_passphrase_information" = "Enter a security phrase only you know, used to secure secrets on your server.";
-"secrets_setup_recovery_passphrase_additional_information" = "Don't use your Matrix account password.";
+"secrets_setup_recovery_passphrase_additional_information" = "Don't use your Encipher account password.";
 "secrets_setup_recovery_passphrase_validate_action" = "Done";
 
 "secrets_setup_recovery_passphrase_confirm_information" = "Enter your Security Phrase again to confirm it.";
@@ -1908,7 +1908,7 @@ Tap the + to start adding people.";
 "secrets_reset_warning_title" = "If you reset everything";
 "secrets_reset_warning_message" = "You will restart with no history, no messages, trusted devices or trusted users.";
 "secrets_reset_reset_action" = "Reset";
-"secrets_reset_authentication_message" = "Enter your Matrix account password to confirm";
+"secrets_reset_authentication_message" = "Enter your Encipher account password to confirm";
 
 // MARK: - Cross-signing
 
@@ -1976,7 +1976,7 @@ Tap the + to start adding people.";
 
 // MARK: - Create Room
 
-"create_room_title" = "New Room";
+"create_room_title" = "New Group";
 "create_room_section_header_name" = "NAME";
 "create_room_placeholder_name" = "Name";
 "create_room_section_header_topic" = "TOPIC (OPTIONAL)";
@@ -2101,7 +2101,7 @@ Tap the + to start adding people.";
 "space_beta_announce_information" = "Spaces are a new way to group rooms and people. They’re not on iOS yet, but you can use them now on Web and Desktop.";
 
 "spaces_home_space_title" = "Home";
-"spaces_add_space_title" = "Create space";
+"spaces_add_space_title" = "Create Team";
 "spaces_add_subspace_title" = "Create space within %@";
 "spaces_create_space_title" = "Create a space";
 "spaces_create_subspace_title" = "Create a subspace";
@@ -2111,7 +2111,7 @@ Tap the + to start adding people.";
 "leave_space_message_admin_warning" = "You are admin of this space, ensure that you have transferred admin right to another member before leaving.";
 "leave_space_only_action" = "Don't leave any rooms";
 "leave_space_and_all_rooms_action" = "Leave all rooms and spaces";
-"spaces_explore_rooms" = "Explore rooms";
+"spaces_explore_rooms" = "Explore Groups";
 "spaces_explore_rooms_format" = "Explore %@";
 "spaces_suggested_room" = "Suggested";
 "spaces_explore_rooms_room_number" = "%@ rooms";
@@ -2149,7 +2149,7 @@ Tap the + to start adding people.";
 // MARK: - Space Creation
 
 "spaces_creation_hint" = "Spaces are a new way to group rooms and people.";
-"spaces_creation_visibility_title" = "What type of space do you want to create?";
+"spaces_creation_visibility_title" = "What type of team do you want to create?";
 "spaces_creation_visibility_message" = "To join an existing space, you need an invite.";
 "spaces_subspace_creation_visibility_title" = "What type of subspace do you want to create?";
 "spaces_subspace_creation_visibility_message" = "The created space will be added to %@.";
@@ -2330,9 +2330,9 @@ Tap the + to start adding people.";
 // MARK: - Space Selector
 
 "space_selector_title" = "My spaces";
-"space_selector_empty_view_title" = "No spaces yet.";
-"space_selector_empty_view_information" = "Spaces are a way to group rooms and people. Create a space to get started.";
-"space_selector_create_space" = "Create Space";
+"space_selector_empty_view_title" = "No teams yet.";
+"space_selector_empty_view_information" = "Teams are a way to group rooms and people. Create a space to get started.";
+"space_selector_create_space" = "Create Team";
 
 "space_detail_nav_title" = "Space detail";
 "space_invite_nav_title" = "Space invite";
@@ -2540,7 +2540,7 @@ To enable access, tap Settings> Location and select Always";
 "user_session_verified_session_description" = "Verified sessions are anywhere you are using Element after entering your passphrase or confirming your identity with another verified session.\n\nThis means that you have all the keys needed to unlock your encrypted messages and confirm to other users that you trust this session.";
 "user_session_unverified_session_title" = "Unverified session";
 "user_session_unverified_session_description" = "Unverified sessions are sessions that have logged in with your credentials but not been cross-verified.\n\nYou should make especially certain that you recognise these sessions as they could represent an unauthorised use of your account.";
-"user_session_permanently_unverified_session_description" = "This session doesn't support encryption, so it can't be verified.\n\nYou won't be able to participate in rooms where encryption is enabled when using this session.\n\nFor best security and privacy, it is recommended to use Matrix clients that support encryption.";
+"user_session_permanently_unverified_session_description" = "This session doesn't support encryption, so it can't be verified.\n\nYou won't be able to participate in rooms where encryption is enabled when using this session.\n\nFor best security and privacy, it is recommended to use Encipher clients that support encryption.";
 "user_session_inactive_session_title" = "Inactive sessions";
 "user_session_inactive_session_description" = "Inactive sessions are sessions you have not used in some time, but they continue to receive encryption keys.\n\nRemoving inactive sessions improves security and performance, and makes it easier for you to identify if a new session is suspicious.";
 "user_session_rename_session_title" = "Renaming sessions";
@@ -2638,7 +2638,7 @@ To enable access, tap Settings> Location and select Always";
 "wysiwyg_composer_link_action_create_title" = "Create a link";
 "wysiwyg_composer_link_action_edit_title" = "Edit link";
 
-// MARK: - MatrixKit
+// MARK: - EncipherKit
 
 
 /* *********************** */
@@ -2653,12 +2653,12 @@ To enable access, tap Settings> Location and select Always";
 "login_home_server_title" = "Homeserver URL:";
 "login_home_server_info" = "Your homeserver stores all your conversations and account data";
 "login_identity_server_title" = "Identity server URL:";
-"login_identity_server_info" = "Matrix provides identity servers to track which emails etc. belong to which Matrix IDs. Only https://matrix.org currently exists.";
+"login_identity_server_info" = "Matrix provides identity servers to track which emails etc. belong to which Encipher IDs. Only https://matrix.org currently exists.";
 "login_user_id_placeholder" = "Matrix ID (e.g. @bob:matrix.org or bob)";
 "login_password_placeholder" = "Password";
 "login_optional_field" = "optional";
 "login_display_name_placeholder" = "Display name (e.g. Bob Obson)";
-"login_email_info" = "Specify an email address lets other users find you on Matrix more easily, and will give you a way to reset your password in the future.";
+"login_email_info" = "Specify an email address lets other users find you on Encipher more easily, and will give you a way to reset your password in the future.";
 "login_email_placeholder" = "Email address";
 "login_prompt_email_token" = "Please enter your email validation token:";
 "login_error_title" = "Login Failed";
@@ -2706,7 +2706,7 @@ To enable access, tap Settings> Location and select Always";
 "select_account" = "Select an account";
 "attach_media" = "Attach Media from Library";
 "capture_media" = "Take Photo/Video";
-"invite_user" = "Invite matrix User";
+"invite_user" = "Invite Encipher User";
 "reset_to_default" = "Reset to default";
 "resend_message" = "Resend the message";
 "select_all" = "Select All";
@@ -2910,7 +2910,7 @@ To enable access, tap Settings> Location and select Always";
 "attachment_cancel_upload" = "Cancel the upload?";
 "attachment_multiselection_size_prompt" = "Do you want to send images as:";
 "attachment_multiselection_original" = "Actual Size";
-"attachment_e2e_keys_file_prompt" = "This file contains encryption keys exported from a Matrix client.\nDo you want to view the file content or import the keys it contains?";
+"attachment_e2e_keys_file_prompt" = "This file contains encryption keys exported from a Encipher client.\nDo you want to view the file content or import the keys it contains?";
 "attachment_e2e_keys_import" = "Import...";
 "attachment_unsupported_preview_title" = "Unable to preview";
 "attachment_unsupported_preview_message" = "This file type is not supported.";
@@ -2933,13 +2933,13 @@ To enable access, tap Settings> Location and select Always";
 
 // E2E import
 "e2e_import_room_keys" = "Import room keys";
-"e2e_import_prompt" = "This process allows you to import encryption keys that you had previously exported from another Matrix client. You will then be able to decrypt any messages that the other client could decrypt.\nThe export file is protected with a passphrase. You should enter the passphrase here, to decrypt the file.";
+"e2e_import_prompt" = "This process allows you to import encryption keys that you had previously exported from another Encipher client. You will then be able to decrypt any messages that the other client could decrypt.\nThe export file is protected with a passphrase. You should enter the passphrase here, to decrypt the file.";
 "e2e_import" = "Import";
 "e2e_passphrase_enter" = "Enter passphrase";
 
 // E2E export
 "e2e_export_room_keys" = "Export room keys";
-"e2e_export_prompt" = "This process allows you to export the keys for messages you have received in encrypted rooms to a local file. You will then be able to import the file into another Matrix client in the future, so that client will also be able to decrypt these messages.\nThe exported file will allow anyone who can read it to decrypt any encrypted messages that you can see, so you should be careful to keep it secure.";
+"e2e_export_prompt" = "This process allows you to export the keys for messages you have received in encrypted rooms to a local file. You will then be able to import the file into another Encipher client in the future, so that client will also be able to decrypt these messages.\nThe exported file will allow anyone who can read it to decrypt any encrypted messages that you can see, so you should be careful to keep it secure.";
 "e2e_export" = "Export";
 "e2e_passphrase_confirm" = "Confirm passphrase";
 "e2e_passphrase_empty" = "Passphrase must not be empty";
@@ -2965,7 +2965,7 @@ To enable access, tap Settings> Location and select Always";
 "local_contacts_access_not_granted" = "Users discovery from local contacts requires access to you contacts but %@ doesn't have permission to use it";
 
 "local_contacts_access_discovery_warning_title" = "Users discovery";
-"local_contacts_access_discovery_warning" = "To discover contacts already using Matrix, %@ can send email addresses and phone numbers in your address book to your chosen Matrix identity server. Where supported, personal data is hashed before sending - please check your identity server's privacy policy for more details.";
+"local_contacts_access_discovery_warning" = "To discover contacts already using Encipher, %@ can send email addresses and phone numbers in your address book to your chosen Encipher identity server. Where supported, personal data is hashed before sending - please check your identity server's privacy policy for more details.";
 
 "microphone_access_not_granted_for_voice_message" = "Voice messages require access to the Microphone but %@ doesn't have permission to use it";
 
@@ -3090,7 +3090,7 @@ To enable access, tap Settings> Location and select Always";
 
 // actions
 "action_logout" = "Logout";
-"create_room" = "Create Room";
+"create_room" = "Create Group";
 "login" = "Login";
 "create_account" = "Create Account";
 "membership_invite" = "Invited";
@@ -3122,7 +3122,7 @@ To enable access, tap Settings> Location and select Always";
 // room details dialog screen
 
 // contacts list screen
-"invitation_message" = "I\'d like to chat with you with matrix. Please, visit the website http://matrix.org to have more information.";
+"invitation_message" = "I\'d like to chat with you with Encipher. Please, visit the website http://matrix.org to have more information.";
 
 // Settings screen
 "settings_title_config" = "Configuration";

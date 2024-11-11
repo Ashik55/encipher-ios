@@ -23,7 +23,7 @@ final class ShowDirectoryViewController: UIViewController {
     // MARK: - Constants
     
     private enum Constants {
-        static let networkHeaderViewEstimatedHeight: CGFloat = 40.0
+        static let networkHeaderViewEstimatedHeight: CGFloat = 0.0
     }
     
     // MARK: - Properties

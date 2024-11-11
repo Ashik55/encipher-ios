@@ -68,11 +68,6 @@ struct AnalyticsPrompt: View {
                 .foregroundColor(theme.colors.primaryContent)
                 .padding(.bottom, 2)
             
-            messageText
-                .font(theme.fonts.body)
-                .multilineTextAlignment(.center)
-                .foregroundColor(theme.colors.secondaryContent)
-            
             Divider()
                 .background(theme.colors.quinaryContent)
                 .padding(.vertical, 28)
