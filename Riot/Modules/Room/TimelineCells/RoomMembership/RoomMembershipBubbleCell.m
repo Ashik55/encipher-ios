@@ -25,7 +25,7 @@ Please see LICENSE in the repository root for full details.
 {
     [super awakeFromNib];
 
-    // Get original xib values
+    self.contentView.backgroundColor = ThemeService.shared.theme.tintColor;
     xibPictureViewTopConstraintConstant = self.pictureViewTopConstraint.constant;
 }
 
@@ -51,6 +51,9 @@ Please see LICENSE in the repository root for full details.
     {
         self.pictureViewTopConstraint.constant = xibPictureViewTopConstraintConstant + 14;
     }
+    
+    id<Theme> theme = ThemeService.shared.theme;
+    self.messageTextView.textColor = theme.baseTextPrimaryColor;
 }
 
 @end

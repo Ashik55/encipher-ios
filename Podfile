@@ -11,8 +11,8 @@ use_frameworks!
 
 # Method to import the MatrixSDK
 def import_MatrixSDK
-  pod 'MatrixSDK', :path => 'matrix-ios-sdk/MatrixSDK.podspec', :inhibit_warnings => false
-  pod 'MatrixSDK/JingleCallStack', :path => 'matrix-ios-sdk/MatrixSDK.podspec', :inhibit_warnings => false
+  pod 'MatrixSDK', :git => 'https://github.com/matrix-org/matrix-ios-sdk.git', :branch => 'develop', :inhibit_warnings => false
+  pod 'MatrixSDK/JingleCallStack', :git => 'https://github.com/matrix-org/matrix-ios-sdk.git', :branch => 'develop', :inhibit_warnings => false
 end
 
 ########################################

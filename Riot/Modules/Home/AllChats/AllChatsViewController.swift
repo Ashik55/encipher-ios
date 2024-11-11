@@ -77,9 +77,8 @@ class AllChatsViewController: HomeViewController {
     
     private func setToolbarHidden(_ isHidden: Bool, animated: Bool) {
         UIView.animate(withDuration: animated ? 0.3 : 0) {
-            self.isToolbarHidden = isHidden
+            self.isToolbarHidden = true
         }
-
     }
     
     // MARK: - SplitViewMasterViewControllerProtocol
@@ -120,14 +119,20 @@ class AllChatsViewController: HomeViewController {
         emptyViewBottomAnchor = toolbar.topAnchor
 
         updateUI()
+        let encipherLogo = UIImageView(image: Asset.Images.encipherLogo.image)
+        encipherLogo.contentMode = .scaleAspectFit
+        encipherLogo.frame = CGRect(x: 0, y: 0, width: 120, height: 32)
+        navigationItem.titleView = encipherLogo
         
-        navigationItem.largeTitleDisplayMode = .automatic
-        navigationController?.navigationBar.prefersLargeTitles = true
-
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
         searchController.delegate = self
-
+        
+        searchController.searchBar.searchTextField.backgroundColor = .white
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(
+            [.foregroundColor: UIColor.white], for: .normal)
+        
+ 
         NotificationCenter.default.addObserver(self, selector: #selector(self.setupEditOptions), name: AllChatsLayoutSettingsManager.didUpdateSettings, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateBadgeButton), name: MXSpaceNotificationCounter.didUpdateNotificationCount, object: nil)
     }
@@ -135,7 +140,6 @@ class AllChatsViewController: HomeViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.toolbar.tintColor = theme.colors.accent
         if self.navigationItem.searchController == nil {
             self.navigationItem.searchController = searchController
         }
@@ -144,6 +148,7 @@ class AllChatsViewController: HomeViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.spaceListDidChange), name: MXSpaceService.didBuildSpaceGraph, object: nil)
         
         set(tableHeadeView: self.bannerView)
+        updateNavigationBarAppearance(with: theme.colors.accent)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -170,6 +175,21 @@ class AllChatsViewController: HomeViewController {
         }
 
         AppDelegate.theDelegate().checkAppVersion()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        updateNavigationBarAppearance(with: .white)
+    }
+    
+ 
+    func updateNavigationBarAppearance(with color: UIColor) {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = color
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -371,29 +391,6 @@ class AllChatsViewController: HomeViewController {
 
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         super.scrollViewDidScroll(scrollView)
-
-        guard scrollView == recentsTableView else {
-            return
-        }
-        
-        let scrollPosition = scrollPosition(of: scrollView)
-        
-        if !self.recentsTableView.isDragging && scrollPosition == 0 && self.isToolbarHidden == true {
-            self.setToolbarHidden(false, animated: true)
-        }
-
-        guard self.recentsTableView.isDragging else {
-            return
-        }
-
-        guard scrollPosition > 0 && scrollPosition < self.recentsTableView.contentSize.height - self.recentsTableView.bounds.height else {
-            return
-        }
-
-        let isToolBarHidden: Bool = scrollPosition - initialScrollPosition > 0
-        if isToolBarHidden != self.isToolbarHidden {
-            self.setToolbarHidden(isToolBarHidden, animated: true)
-        }
     }
     
     // MARK: - Empty view management
@@ -486,8 +483,8 @@ class AllChatsViewController: HomeViewController {
 
     private func updateUI() {
         let currentSpace = self.dataSource?.currentSpace
-        self.title = currentSpace?.summary?.displayName ?? VectorL10n.allChatsTitle
         
+        setToolbarHidden(true, animated: true)
         setupEditOptions()
         updateToolbar(with: editActionProvider.updateMenu(with: mainSession, parentSpace: currentSpace, completion: { [weak self] menu in
             self?.updateToolbar(with: menu)
@@ -497,7 +494,10 @@ class AllChatsViewController: HomeViewController {
     }
     
     private func updateRightNavigationItem(with menu: UIMenu) {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"), menu: menu)
+        let menuButton = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"), menu: menu)
+        menuButton.tintColor = .white
+        self.navigationItem.rightBarButtonItem = menuButton
+
     }
     
     private lazy var spacesButton: BadgedBarButtonItem = {
@@ -535,16 +535,58 @@ class AllChatsViewController: HomeViewController {
         guard isViewLoaded else {
             return
         }
-        
-        self.isToolbarHidden = false
-        self.update(with: theme)
-        
-        self.toolbar.items = [
-            spacesButton,
-            UIBarButtonItem.flexibleSpace(),
-            UIBarButtonItem(image: Asset.Images.allChatsEditIcon.image, menu: menu)
-        ]
+        setupFloatingButtons(with: menu)
     }
+    
+    private func setupFloatingButtons(with menu: UIMenu) {
+ 
+        let floatingButtonSize: CGFloat = 60
+        let spacesButton = UIButton(type: .system)
+        spacesButton.accessibilityLabel = VectorL10n.spaceSelectorTitle
+        spacesButton.addTarget(self, action: #selector(showSpaceSelectorAction(sender:)), for: .touchUpInside)
+        spacesButton.setImage(Asset.Images.allChatsSpacesIcon.image.withRenderingMode(.alwaysTemplate), for: .normal)
+        spacesButton.tintColor = theme.colors.accent
+        spacesButton.layer.cornerRadius = floatingButtonSize / 2
+        spacesButton.clipsToBounds = false
+        spacesButton.backgroundColor = .white
+        spacesButton.layer.shadowColor = UIColor.black.cgColor
+        spacesButton.layer.shadowOpacity = 0.2
+        spacesButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+        spacesButton.layer.shadowRadius = 2
+
+        let allChatsEditIcon = UIButton(type: .system)
+        allChatsEditIcon.menu = menu
+        allChatsEditIcon.showsMenuAsPrimaryAction = true
+        allChatsEditIcon.setImage(Asset.Images.allChatsEditIcon.image.withRenderingMode(.alwaysTemplate), for: .normal)
+        allChatsEditIcon.tintColor = .white
+        allChatsEditIcon.layer.cornerRadius = floatingButtonSize / 2
+        allChatsEditIcon.clipsToBounds = false
+        allChatsEditIcon.backgroundColor = theme.colors.accent
+        allChatsEditIcon.layer.shadowColor = UIColor.black.cgColor
+        allChatsEditIcon.layer.shadowOpacity = 0.2
+        allChatsEditIcon.layer.shadowOffset = CGSize(width: 0, height: 2)
+        allChatsEditIcon.layer.shadowRadius = 1
+
+        
+        [spacesButton, allChatsEditIcon].forEach { button in
+            button.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(button)
+        }
+
+       
+        NSLayoutConstraint.activate([
+            allChatsEditIcon.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            allChatsEditIcon.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
+            allChatsEditIcon.widthAnchor.constraint(equalToConstant: floatingButtonSize),
+            allChatsEditIcon.heightAnchor.constraint(equalToConstant: floatingButtonSize),
+
+            spacesButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            spacesButton.bottomAnchor.constraint(equalTo: allChatsEditIcon.topAnchor, constant: -10),
+            spacesButton.widthAnchor.constraint(equalToConstant: floatingButtonSize),
+            spacesButton.heightAnchor.constraint(equalToConstant: floatingButtonSize)
+        ])
+    }
+
     
     private func showCreateSpace(parentSpaceId: String?) {
         let coordinator = SpaceCreationCoordinator(parameters: SpaceCreationCoordinatorParameters(session: self.mainSession, parentSpaceId: parentSpaceId))

@@ -7,6 +7,7 @@ Please see LICENSE in the repository root for full details.
  */
 
 #import "RoomIncomingTextMsgBubbleCell.h"
+#import "ThemeService.h"
 
 /**
  `RoomMembershipBubbleCell` displays a membership event.

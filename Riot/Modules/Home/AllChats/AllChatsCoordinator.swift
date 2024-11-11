@@ -353,18 +353,23 @@ class AllChatsCoordinator: NSObject, SplitViewMasterCoordinatorProtocol {
     }
 
     private func createAvatarButtonItem(for viewController: UIViewController) {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 36, height: 36))
+        
+        let avatarSize: CGFloat = 28
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: avatarSize, height: avatarSize))
         view.backgroundColor = .clear
         
-        let avatarInsets: UIEdgeInsets = .init(top: 7, left: 7, bottom: 7, right: 7)
+        let avatarInsets: UIEdgeInsets = .init(top: 2, left: 2, bottom: 2, right: 2)
         let button: UIButton = .init(frame: view.bounds)
-        button.imageEdgeInsets = avatarInsets
         button.setImage(Asset.Images.tabPeople.image, for: .normal)
         button.menu = avatarMenu
         button.showsMenuAsPrimaryAction = true
         button.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         button.accessibilityLabel = VectorL10n.allChatsUserMenuAccessibilityLabel
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.cornerRadius = avatarSize / 2
         view.addSubview(button)
+
         self.avatarMenuButton = button
 
         let avatarView = UserAvatarView(frame: view.bounds.inset(by: avatarInsets))
@@ -373,8 +378,8 @@ class AllChatsCoordinator: NSObject, SplitViewMasterCoordinatorProtocol {
         avatarView.autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin]
         view.addSubview(avatarView)
         NSLayoutConstraint.activate([
-            view.widthAnchor.constraint(equalToConstant: 36),
-            view.heightAnchor.constraint(equalToConstant: 36)
+            view.widthAnchor.constraint(equalToConstant: avatarSize),
+            view.heightAnchor.constraint(equalToConstant: avatarSize)
         ])
         self.avatarMenuView = avatarView
         updateAvatarButtonItem()
