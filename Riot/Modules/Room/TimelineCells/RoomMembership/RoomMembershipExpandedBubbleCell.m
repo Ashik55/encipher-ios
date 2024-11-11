@@ -32,7 +32,7 @@ NSString *const kRoomMembershipExpandedBubbleCellTapOnCollapseButton = @"kRoomMe
     
     self.separatorView.backgroundColor = ThemeService.shared.theme.lineBreakColor;
     
-    [self.collapseButton setTintColor:ThemeService.shared.theme.tintColor];
+    [self.collapseButton setTintColor: [UIColor whiteColor]];
     self.collapseButton.titleLabel.font = [UIFont systemFontOfSize:14];
 }
 

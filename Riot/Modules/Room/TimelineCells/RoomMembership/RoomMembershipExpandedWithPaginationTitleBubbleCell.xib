@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WmY-Jw-mqv" id="ef1-Tq-U3Z">
-                <rect key="frame" x="0.0" y="0.0" width="600" height="123.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqv-9x-o80" userLabel="Pagination Title View">
@@ -49,7 +46,7 @@
                             <constraint firstItem="ffj-Hu-v3L" firstAttribute="top" secondItem="fQh-wY-vKf" secondAttribute="bottom" constant="5" id="mJs-YR-uRp"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="df5-x1-Zhy">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="df5-x1-Zhy">
                         <rect key="frame" x="531" y="57" width="54" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <state key="normal" title="collapse"/>
@@ -58,7 +55,7 @@
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJl-MG-cbs">
-                        <rect key="frame" x="55" y="89" width="530" height="1"/>
+                        <rect key="frame" x="55" y="92" width="530" height="1"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="Jyb-5H-rlc"/>
@@ -74,7 +71,7 @@
                         </constraints>
                     </view>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="text message" translatesAutoresizingMaskIntoConstraints="NO" id="HTH-5n-MSU">
-                        <rect key="frame" x="71" y="93" width="102" height="30.5"/>
+                        <rect key="frame" x="79" y="93" width="102" height="31"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="MessageTextView"/>
                         <constraints>
@@ -86,7 +83,7 @@
                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                     </textView>
                     <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOg-Kt-8vW">
-                        <rect key="frame" x="515" y="96" width="70" height="27.5"/>
+                        <rect key="frame" x="515" y="96" width="70" height="28"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="BubbleInfoContainer"/>
                         <constraints>
@@ -94,22 +91,22 @@
                         </constraints>
                     </view>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stw-MD-khQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="123.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </subviews>
                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="stw-MD-khQ" firstAttribute="leading" secondItem="ef1-Tq-U3Z" secondAttribute="leadingMargin" constant="-8" id="0oH-d5-525"/>
                     <constraint firstItem="hgp-Z5-rAj" firstAttribute="top" secondItem="ef1-Tq-U3Z" secondAttribute="top" constant="102" id="2Ih-ga-N9s"/>
                     <constraint firstItem="IOg-Kt-8vW" firstAttribute="top" secondItem="ef1-Tq-U3Z" secondAttribute="top" constant="96" id="4Ac-p5-610"/>
                     <constraint firstItem="oqv-9x-o80" firstAttribute="leading" secondItem="ef1-Tq-U3Z" secondAttribute="leading" constant="56" id="4Qa-nt-Kyt"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="stw-MD-khQ" secondAttribute="bottom" constant="-8" id="8Lj-ay-d6E"/>
                     <constraint firstItem="df5-x1-Zhy" firstAttribute="top" secondItem="ef1-Tq-U3Z" secondAttribute="top" constant="57" id="A0F-3b-DdS"/>
                     <constraint firstAttribute="trailing" secondItem="dJl-MG-cbs" secondAttribute="trailing" constant="15" id="IqK-FM-2sV"/>
-                    <constraint firstItem="stw-MD-khQ" firstAttribute="top" secondItem="ef1-Tq-U3Z" secondAttribute="topMargin" constant="-8" id="JXb-n4-O4S"/>
+                    <constraint firstAttribute="trailing" secondItem="stw-MD-khQ" secondAttribute="trailing" id="Mna-hY-7Fw"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HTH-5n-MSU" secondAttribute="trailing" constant="15" id="Shz-6S-kGd"/>
+                    <constraint firstAttribute="bottom" secondItem="stw-MD-khQ" secondAttribute="bottom" id="WQc-eG-rjs"/>
                     <constraint firstItem="dJl-MG-cbs" firstAttribute="top" secondItem="ef1-Tq-U3Z" secondAttribute="topMargin" constant="81" id="cTz-wW-wDq"/>
+                    <constraint firstItem="stw-MD-khQ" firstAttribute="top" secondItem="ef1-Tq-U3Z" secondAttribute="top" id="ch9-OA-XPI"/>
                     <constraint firstItem="HTH-5n-MSU" firstAttribute="leading" secondItem="ef1-Tq-U3Z" secondAttribute="leadingMargin" constant="63" id="cxO-Px-nau"/>
                     <constraint firstAttribute="bottom" secondItem="IOg-Kt-8vW" secondAttribute="bottom" id="f24-Fr-D4j"/>
                     <constraint firstAttribute="trailing" secondItem="oqv-9x-o80" secondAttribute="trailing" constant="10" id="gXs-v7-6Dn"/>
@@ -117,9 +114,9 @@
                     <constraint firstItem="dJl-MG-cbs" firstAttribute="leading" secondItem="ef1-Tq-U3Z" secondAttribute="leading" constant="55" id="lWu-UJ-6BJ"/>
                     <constraint firstItem="HTH-5n-MSU" firstAttribute="top" secondItem="ef1-Tq-U3Z" secondAttribute="top" constant="93" id="mkw-3s-H8B"/>
                     <constraint firstAttribute="trailing" secondItem="df5-x1-Zhy" secondAttribute="trailing" constant="15" id="oAn-Qb-KHL"/>
+                    <constraint firstItem="stw-MD-khQ" firstAttribute="leading" secondItem="ef1-Tq-U3Z" secondAttribute="leading" id="oBW-aD-wQN"/>
                     <constraint firstAttribute="bottom" secondItem="HTH-5n-MSU" secondAttribute="bottom" id="oTk-3F-SEC"/>
                     <constraint firstAttribute="trailing" secondItem="IOg-Kt-8vW" secondAttribute="trailing" constant="15" id="pWt-Mb-kAX"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="stw-MD-khQ" secondAttribute="trailing" constant="-8" id="qO5-ZZ-mHI"/>
                     <constraint firstItem="hgp-Z5-rAj" firstAttribute="leading" secondItem="ef1-Tq-U3Z" secondAttribute="leading" constant="55" id="tuw-aU-ncu"/>
                 </constraints>
             </tableViewCellContentView>
@@ -144,6 +141,7 @@
                 <outlet property="pictureViewTopConstraint" destination="2Ih-ga-N9s" id="rpQ-bN-moE"/>
                 <outlet property="separatorView" destination="dJl-MG-cbs" id="Vnp-K7-DEh"/>
             </connections>
+            <point key="canvasLocation" x="45" y="19"/>
         </tableViewCell>
     </objects>
 </document>

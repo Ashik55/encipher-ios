@@ -21,6 +21,7 @@ Please see LICENSE in the repository root for full details.
 
     self.paginationLabel.textColor = ThemeService.shared.theme.tintColor;
     self.paginationSeparatorView.backgroundColor = ThemeService.shared.theme.tintColor;
+    [self.collapseButton setTintColor: [UIColor whiteColor]];
 }
 
 - (void)render:(MXKCellData *)cellData
