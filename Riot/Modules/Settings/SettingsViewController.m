@@ -533,10 +533,10 @@ SSOAuthenticationPresenterDelegate>
     Section *sectionTimeline = [Section sectionWithTag:SECTION_TAG_TIMELINE];
     sectionTimeline.headerTitle = VectorL10n.settingsTimeline;
 
-    if (BuildSettings.roomScreenAllowTimelineStyleConfiguration)
-    {
-        [sectionTimeline addRowWithTag:TIMELINE_STYLE_INDEX];
-    }
+//    if (BuildSettings.roomScreenAllowTimelineStyleConfiguration)
+//    {
+//        [sectionTimeline addRowWithTag:TIMELINE_STYLE_INDEX];
+//    }
     [sectionTimeline addRowWithTag:TIMELINE_SHOW_REDACTIONS_IN_ROOM_HISTORY_INDEX];
     [sectionTimeline addRowWithTag:TIMELINE_USE_ONLY_LATEST_USER_AVATAR_AND_NAME_INDEX];
 

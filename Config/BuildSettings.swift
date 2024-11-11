@@ -326,7 +326,7 @@ final class BuildSettings: NSObject {
     static let roomScreenAllowTimelineStyleConfiguration: Bool = true
     static let roomScreenTimelineDefaultStyleIdentifier: RoomTimelineStyleIdentifier = .plain
     static var isRoomScreenEnableMessageBubblesByDefault: Bool {
-        return self.roomScreenTimelineDefaultStyleIdentifier == .bubble
+        return true
     }
     static let roomScreenUseOnlyLatestUserAvatarAndName: Bool = false
 
