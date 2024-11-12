@@ -65,8 +65,19 @@ class AllChatsViewController: HomeViewController {
         ThemeService.shared().theme
     }
     private let floatingButtonSize: CGFloat = 60
+    
     private var floatingSpacesButton = UIButton(type: .system)
     private var floatingAllChatsEditButton = UIButton(type: .system)
+    
+    //Can be used if badge support needed
+    private lazy var spacesButton: BadgedBarButtonItem = {
+        let innerButton = UIButton(type: .system)
+        innerButton.accessibilityLabel = VectorL10n.spaceSelectorTitle
+        innerButton.addTarget(self, action: #selector(self.showSpaceSelectorAction(sender:)), for: .touchUpInside)
+        innerButton.setImage(Asset.Images.allChatsSpacesIcon.image, for: .normal)
+        return BadgedBarButtonItem(withBaseButton: innerButton, theme: theme)
+    }()
+    
 
     @IBOutlet private var toolbar: UIToolbar!
     private var isToolbarHidden: Bool = false {
@@ -119,23 +130,11 @@ class AllChatsViewController: HomeViewController {
         recentsTableView.contentInsetAdjustmentBehavior = .automatic
         
         toolbarHeight = toolbar.frame.height
-        emptyViewBottomAnchor = toolbar.topAnchor
+        emptyViewBottomAnchor = view.bottomAnchor
 
+        setUpNavigationBar()
         updateUI()
-        let encipherLogo = UIImageView(image: Asset.Images.encipherLogo.image)
-        encipherLogo.contentMode = .scaleAspectFit
-        encipherLogo.frame = CGRect(x: 0, y: 0, width: 120, height: 32)
-        navigationItem.titleView = encipherLogo
         
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchResultsUpdater = self
-        searchController.delegate = self
-        
-        searchController.searchBar.searchTextField.backgroundColor = .white
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(
-            [.foregroundColor: UIColor.white], for: .normal)
-        
- 
         NotificationCenter.default.addObserver(self, selector: #selector(self.setupEditOptions), name: AllChatsLayoutSettingsManager.didUpdateSettings, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateBadgeButton), name: MXSpaceNotificationCounter.didUpdateNotificationCount, object: nil)
     }
@@ -183,9 +182,23 @@ class AllChatsViewController: HomeViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        updateNavigationBarAppearance(with: .white)
+        updateNavigationBarAppearance(with: theme.searchBackgroundColor)
     }
     
+    func setUpNavigationBar() {
+        let encipherLogo = UIImageView(image: Asset.Images.encipherLogo.image)
+        encipherLogo.contentMode = .scaleAspectFit
+        encipherLogo.frame = CGRect(x: 0, y: 0, width: 120, height: 32)
+        navigationItem.titleView = encipherLogo
+        
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchResultsUpdater = self
+        searchController.delegate = self
+        
+        searchController.searchBar.searchTextField.backgroundColor = .white
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(
+            [.foregroundColor: UIColor.white], for: .normal)
+    }
  
     func updateNavigationBarAppearance(with color: UIColor) {
         let appearance = UINavigationBarAppearance()
@@ -392,10 +405,6 @@ class AllChatsViewController: HomeViewController {
         initialScrollPosition = scrollPosition(of: scrollView)
     }
 
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        super.scrollViewDidScroll(scrollView)
-    }
-    
     // MARK: - Empty view management
     
     override func updateEmptyView() {
@@ -419,6 +428,7 @@ class AllChatsViewController: HomeViewController {
         self.emptyView?.fill(with: emptyViewArtwork,
                              title: title,
                              informationText: informationText)
+        [self.floatingSpacesButton, self.floatingAllChatsEditButton].forEach { self.view.bringSubviewToFront($0)}
     }
     
     private var emptyViewArtwork: UIImage {
@@ -493,7 +503,7 @@ class AllChatsViewController: HomeViewController {
             self?.updateToolbar(with: menu)
         }))
         updateEmptyView()
-        updateBadgeButton()
+        //updateBadgeButton()
     }
     
     private func updateRightNavigationItem(with menu: UIMenu) {
@@ -502,14 +512,6 @@ class AllChatsViewController: HomeViewController {
         self.navigationItem.rightBarButtonItem = menuButton
 
     }
-    
-    private lazy var spacesButton: BadgedBarButtonItem = {
-        let innerButton = UIButton(type: .system)
-        innerButton.accessibilityLabel = VectorL10n.spaceSelectorTitle
-        innerButton.addTarget(self, action: #selector(self.showSpaceSelectorAction(sender:)), for: .touchUpInside)
-        innerButton.setImage(Asset.Images.allChatsSpacesIcon.image, for: .normal)
-        return BadgedBarButtonItem(withBaseButton: innerButton, theme: theme)
-    }()
     
     @objc private func updateBadgeButton() {
         guard isViewLoaded, let session = mainSession else {
