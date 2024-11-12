@@ -55,7 +55,7 @@ public class VectorL10n: NSObject {
   public static var accountErrorEmailWrongTitle: String { 
     return VectorL10n.tr("Vector", "account_error_email_wrong_title") 
   }
-  /// Matrix session is not opened
+  /// Encipher session is not opened
   public static var accountErrorMatrixSessionIsNotOpened: String { 
     return VectorL10n.tr("Vector", "account_error_matrix_session_is_not_opened") 
   }
@@ -411,7 +411,7 @@ public class VectorL10n: NSObject {
   public static var authForgotPasswordErrorNoConfiguredIdentityServer: String { 
     return VectorL10n.tr("Vector", "auth_forgot_password_error_no_configured_identity_server") 
   }
-  /// URL (e.g. https://matrix.org)
+  /// URL (e.g. https://Encipher.org)
   public static var authHomeServerPlaceholder: String { 
     return VectorL10n.tr("Vector", "auth_home_server_placeholder") 
   }
@@ -727,7 +727,7 @@ public class VectorL10n: NSObject {
   public static var authenticationQrLoginConfirmTitle: String { 
     return VectorL10n.tr("Vector", "authentication_qr_login_confirm_title") 
   }
-  /// Open Element on your other device
+  /// Open Encipher on your other device
   public static var authenticationQrLoginDisplayStep1: String { 
     return VectorL10n.tr("Vector", "authentication_qr_login_display_step1") 
   }
@@ -795,7 +795,7 @@ public class VectorL10n: NSObject {
   public static var authenticationQrLoginStartNeedAlternative: String { 
     return VectorL10n.tr("Vector", "authentication_qr_login_start_need_alternative") 
   }
-  /// Open Element on your other device
+  /// Open Encipher on your other device
   public static var authenticationQrLoginStartStep1: String { 
     return VectorL10n.tr("Vector", "authentication_qr_login_start_step1") 
   }
@@ -1271,11 +1271,11 @@ public class VectorL10n: NSObject {
   public static var contactLocalContacts: String { 
     return VectorL10n.tr("Vector", "contact_local_contacts") 
   }
-  /// Matrix Users
+  /// Encipher Users
   public static var contactMxUsers: String { 
     return VectorL10n.tr("Vector", "contact_mx_users") 
   }
-  /// Matrix users only
+  /// Encipher users only
   public static var contactsAddressBookMatrixUsersToggle: String { 
     return VectorL10n.tr("Vector", "contacts_address_book_matrix_users_toggle") 
   }
@@ -1343,7 +1343,7 @@ public class VectorL10n: NSObject {
   public static var createRoomEnableEncryption: String { 
     return VectorL10n.tr("Vector", "create_room_enable_encryption") 
   }
-  /// #testroom:matrix.org
+  /// #testroom:Encipher.org
   public static var createRoomPlaceholderAddress: String { 
     return VectorL10n.tr("Vector", "create_room_placeholder_address") 
   }
@@ -1871,7 +1871,7 @@ public class VectorL10n: NSObject {
   public static var deviceVerificationSelfVerifyAlertValidateAction: String { 
     return VectorL10n.tr("Vector", "device_verification_self_verify_alert_validate_action") 
   }
-  /// You need to verify this session in order to read your secure message history.\n\nOpen Element on one of your other devices and follow the instructions.
+  /// You need to verify this session in order to read your secure message history.\n\nOpen Encipher on one of your other devices and follow the instructions.
   public static var deviceVerificationSelfVerifyOpenOnOtherDeviceInformation: String { 
     return VectorL10n.tr("Vector", "device_verification_self_verify_open_on_other_device_information") 
   }
@@ -1999,7 +1999,7 @@ public class VectorL10n: NSObject {
   public static var directoryServerPickerTitle: String { 
     return VectorL10n.tr("Vector", "directory_server_picker_title") 
   }
-  /// matrix.org
+  /// Encipher.org
   public static var directoryServerPlaceholder: String { 
     return VectorL10n.tr("Vector", "directory_server_placeholder") 
   }
@@ -2667,7 +2667,7 @@ public class VectorL10n: NSObject {
   public static var incomingVoiceCall: String { 
     return VectorL10n.tr("Vector", "incoming_voice_call") 
   }
-  /// I'd like to chat with you with Encipher. Please, visit the website http://matrix.org to have more information.
+  /// I'd like to chat with you with Encipher. Please, visit the website http://Encipher.org to have more information.
   public static var invitationMessage: String { 
     return VectorL10n.tr("Vector", "invitation_message") 
   }
@@ -3291,7 +3291,7 @@ public class VectorL10n: NSObject {
   public static var locationSharingAllowBackgroundLocationCancelAction: String { 
     return VectorL10n.tr("Vector", "location_sharing_allow_background_location_cancel_action") 
   }
-  /// If you’d like to share your Live location, Element needs location access when the app is in the background.\nTo enable access, tap Settings> Location and select Always
+  /// If you’d like to share your Live location, Encipher needs location access when the app is in the background.\nTo enable access, tap Settings> Location and select Always
   public static var locationSharingAllowBackgroundLocationMessage: String { 
     return VectorL10n.tr("Vector", "location_sharing_allow_background_location_message") 
   }
@@ -3579,7 +3579,7 @@ public class VectorL10n: NSObject {
   public static var loginHomeServerTitle: String { 
     return VectorL10n.tr("Vector", "login_home_server_title") 
   }
-  /// Matrix provides identity servers to track which emails etc. belong to which Encipher IDs. Only https://matrix.org currently exists.
+  /// Encipher provides identity servers to track which emails etc. belong to which Encipher IDs. Only https://Encipher.org currently exists.
   public static var loginIdentityServerInfo: String { 
     return VectorL10n.tr("Vector", "login_identity_server_info") 
   }
@@ -3611,7 +3611,7 @@ public class VectorL10n: NSObject {
   public static var loginPromptEmailToken: String { 
     return VectorL10n.tr("Vector", "login_prompt_email_token") 
   }
-  /// URL (e.g. https://matrix.org)
+  /// URL (e.g. https://Encipher.org)
   public static var loginServerUrlPlaceholder: String { 
     return VectorL10n.tr("Vector", "login_server_url_placeholder") 
   }
@@ -3623,7 +3623,7 @@ public class VectorL10n: NSObject {
   public static var loginUseFallback: String { 
     return VectorL10n.tr("Vector", "login_use_fallback") 
   }
-  /// Matrix ID (e.g. @bob:matrix.org or bob)
+  /// Encipher ID (e.g. @bob:Encipher.org or bob)
   public static var loginUserIdPlaceholder: String { 
     return VectorL10n.tr("Vector", "login_user_id_placeholder") 
   }
@@ -3695,7 +3695,7 @@ public class VectorL10n: NSObject {
   public static var manageSessionTrusted: String { 
     return VectorL10n.tr("Vector", "manage_session_trusted") 
   }
-  /// Matrix
+  /// Encipher
   public static var matrix: String { 
     return VectorL10n.tr("Vector", "matrix") 
   }
@@ -4587,7 +4587,7 @@ public class VectorL10n: NSObject {
   public static var onboardingSplashPage3Title: String { 
     return VectorL10n.tr("Vector", "onboarding_splash_page_3_title") 
   }
-  /// Element is also great for the workplace. It’s trusted by the world’s most secure organisations.
+  /// Encipher is also great for the workplace. It’s trusted by the world’s most secure organisations.
   public static var onboardingSplashPage4Message: String { 
     return VectorL10n.tr("Vector", "onboarding_splash_page_4_message") 
   }
@@ -8715,7 +8715,7 @@ public class VectorL10n: NSObject {
   public static var stop: String { 
     return VectorL10n.tr("Vector", "stop") 
   }
-  /// Element is a new type of messenger and collaboration app that:\n\n1. Puts you in control to preserve your privacy\n2. Lets you communicate with anyone in the Encipher network, and even beyond by integrating with apps such as Slack\n3. Protects you from advertising, datamining, backdoors and walled gardens\n4. Secures you through end-to-end encryption, with cross-signing to verify others\n\nElement is completely different from other messaging and collaboration apps because it is decentralised and open source.\n\nElement lets you self-host - or choose a host - so that you have privacy, ownership and control of your data and conversations. It gives you access to an open network; so you’re not just stuck speaking to other Element users only. And it is very secure.\n\nElement is able to do all this because it operates on Encipher - the standard for open, decentralised communication. \n\nElement puts you in control by letting you choose who hosts your conversations. From the Element app, you can choose to host in different ways:\n\n1. Get a free account on the Encipher.org public server\n2. Self-host your account by running a server on your own hardware\n3. Sign up for an account on a custom server by simply subscribing to the Element Encipher Services hosting platform\n\nWhy choose Element?\n\nOWN YOUR DATA: You decide where to keep your data and messages. You own it and control it, not some MEGACORP that mines your data or gives access to third parties.\n\nOPEN MESSAGING AND COLLABORATION: You can chat with anyone else in the Encipher network, whether they’re using Element or another Encipher app, and even if they are using a different messaging system of the likes of Slack, IRC or XMPP.\n\nSUPER-SECURE: Real end-to-end encryption (only those in the conversation can decrypt messages), and cross-signing to verify the devices of conversation participants.\n\nCOMPLETE COMMUNICATION: Messaging, voice and video calls, file sharing, screen sharing and a whole bunch of integrations, bots and widgets. Build rooms, communities, stay in touch and get things done.\n\nEVERYWHERE YOU ARE: Stay in touch wherever you are with fully synchronised message history across all your devices and on the web at https://element.io/app.
+  /// Encipher is a new type of messenger and collaboration app that:\n\n1. Puts you in control to preserve your privacy\n2. Lets you communicate with anyone in the Encipher network, and even beyond by integrating with apps such as Slack\n3. Protects you from advertising, datamining, backdoors and walled gardens\n4. Secures you through end-to-end encryption, with cross-signing to verify others\n\nEncipher is completely different from other messaging and collaboration apps because it is decentralised and open source.\n\nEncipher lets you self-host - or choose a host - so that you have privacy, ownership and control of your data and conversations. It gives you access to an open network; so you’re not just stuck speaking to other Encipher users only. And it is very secure.\n\nEncipher is able to do all this because it operates on Encipher - the standard for open, decentralised communication. \n\nEncipher puts you in control by letting you choose who hosts your conversations. From the Encipher app, you can choose to host in different ways:\n\n1. Get a free account on the Encipher.org public server\n2. Self-host your account by running a server on your own hardware\n3. Sign up for an account on a custom server by simply subscribing to the Encipher Encipher Services hosting platform\n\nWhy choose Encipher?\n\nOWN YOUR DATA: You decide where to keep your data and messages. You own it and control it, not some MEGACORP that mines your data or gives access to third parties.\n\nOPEN MESSAGING AND COLLABORATION: You can chat with anyone else in the Encipher network, whether they’re using Encipher or another Encipher app, and even if they are using a different messaging system of the likes of Slack, IRC or XMPP.\n\nSUPER-SECURE: Real end-to-end encryption (only those in the conversation can decrypt messages), and cross-signing to verify the devices of conversation participants.\n\nCOMPLETE COMMUNICATION: Messaging, voice and video calls, file sharing, screen sharing and a whole bunch of integrations, bots and widgets. Build rooms, communities, stay in touch and get things done.\n\nEVERYWHERE YOU ARE: Stay in touch wherever you are with fully synchronised message history across all your devices and on the web at https://Encipher.io/app.
   public static var storeFullDescription: String { 
     return VectorL10n.tr("Vector", "store_full_description") 
   }
@@ -9147,7 +9147,7 @@ public class VectorL10n: NSObject {
   public static var userSessionVerifiedAdditionalInfo: String { 
     return VectorL10n.tr("Vector", "user_session_verified_additional_info") 
   }
-  /// Verified sessions are anywhere you are using Element after entering your passphrase or confirming your identity with another verified session.\n\nThis means that you have all the keys needed to unlock your encrypted messages and confirm to other users that you trust this session.
+  /// Verified sessions are anywhere you are using Encipher after entering your passphrase or confirming your identity with another verified session.\n\nThis means that you have all the keys needed to unlock your encrypted messages and confirm to other users that you trust this session.
   public static var userSessionVerifiedSessionDescription: String { 
     return VectorL10n.tr("Vector", "user_session_verified_session_description") 
   }

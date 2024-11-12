@@ -17,7 +17,7 @@
 
 // String for App Store
 "store_short_description" = "Secure decentralised chat/VoIP";
-"store_full_description" = "Element is a new type of messenger and collaboration app that:\n\n1. Puts you in control to preserve your privacy\n2. Lets you communicate with anyone in the Encipher network, and even beyond by integrating with apps such as Slack\n3. Protects you from advertising, datamining, backdoors and walled gardens\n4. Secures you through end-to-end encryption, with cross-signing to verify others\n\nElement is completely different from other messaging and collaboration apps because it is decentralised and open source.\n\nElement lets you self-host - or choose a host - so that you have privacy, ownership and control of your data and conversations. It gives you access to an open network; so you’re not just stuck speaking to other Element users only. And it is very secure.\n\nElement is able to do all this because it operates on Encipher - the standard for open, decentralised communication. \n\nElement puts you in control by letting you choose who hosts your conversations. From the Element app, you can choose to host in different ways:\n\n1. Get a free account on the Encipher.org public server\n2. Self-host your account by running a server on your own hardware\n3. Sign up for an account on a custom server by simply subscribing to the Element Encipher Services hosting platform\n\nWhy choose Element?\n\nOWN YOUR DATA: You decide where to keep your data and messages. You own it and control it, not some MEGACORP that mines your data or gives access to third parties.\n\nOPEN MESSAGING AND COLLABORATION: You can chat with anyone else in the Encipher network, whether they’re using Element or another Encipher app, and even if they are using a different messaging system of the likes of Slack, IRC or XMPP.\n\nSUPER-SECURE: Real end-to-end encryption (only those in the conversation can decrypt messages), and cross-signing to verify the devices of conversation participants.\n\nCOMPLETE COMMUNICATION: Messaging, voice and video calls, file sharing, screen sharing and a whole bunch of integrations, bots and widgets. Build rooms, communities, stay in touch and get things done.\n\nEVERYWHERE YOU ARE: Stay in touch wherever you are with fully synchronised message history across all your devices and on the web at https://element.io/app.";
+"store_full_description" = "Encipher is a new type of messenger and collaboration app that:\n\n1. Puts you in control to preserve your privacy\n2. Lets you communicate with anyone in the Encipher network, and even beyond by integrating with apps such as Slack\n3. Protects you from advertising, datamining, backdoors and walled gardens\n4. Secures you through end-to-end encryption, with cross-signing to verify others\n\nEncipher is completely different from other messaging and collaboration apps because it is decentralised and open source.\n\nEncipher lets you self-host - or choose a host - so that you have privacy, ownership and control of your data and conversations. It gives you access to an open network; so you’re not just stuck speaking to other Encipher users only. And it is very secure.\n\nEncipher is able to do all this because it operates on Encipher - the standard for open, decentralised communication. \n\nEncipher puts you in control by letting you choose who hosts your conversations. From the Encipher app, you can choose to host in different ways:\n\n1. Get a free account on the Encipher.org public server\n2. Self-host your account by running a server on your own hardware\n3. Sign up for an account on a custom server by simply subscribing to the Encipher Encipher Services hosting platform\n\nWhy choose Encipher?\n\nOWN YOUR DATA: You decide where to keep your data and messages. You own it and control it, not some MEGACORP that mines your data or gives access to third parties.\n\nOPEN MESSAGING AND COLLABORATION: You can chat with anyone else in the Encipher network, whether they’re using Encipher or another Encipher app, and even if they are using a different messaging system of the likes of Slack, IRC or XMPP.\n\nSUPER-SECURE: Real end-to-end encryption (only those in the conversation can decrypt messages), and cross-signing to verify the devices of conversation participants.\n\nCOMPLETE COMMUNICATION: Messaging, voice and video calls, file sharing, screen sharing and a whole bunch of integrations, bots and widgets. Build rooms, communities, stay in touch and get things done.\n\nEVERYWHERE YOU ARE: Stay in touch wherever you are with fully synchronised message history across all your devices and on the web at https://Encipher.io/app.";
 "store_promotional_text" = "Privacy-preserving chat and collaboration app, on an open network. Decentralised to put you in control. No datamining, no backdoors and no third party access.";
 
 // Titles
@@ -108,7 +108,7 @@
 "onboarding_splash_page_3_title" = "Secure messaging.";
 "onboarding_splash_page_3_message" = "End-to-end encrypted and no phone number required. No ads or datamining.";
 "onboarding_splash_page_4_title_no_pun" = "Messaging for your team.";
-"onboarding_splash_page_4_message" = "Element is also great for the workplace. It’s trusted by the world’s most secure organisations.";
+"onboarding_splash_page_4_message" = "Encipher is also great for the workplace. It’s trusted by the world’s most secure organisations.";
 
 "onboarding_use_case_title" = "Who will you chat to the most?";
 "onboarding_use_case_message" = "We’ll help you get connected";
@@ -215,7 +215,7 @@
 
 "authentication_qr_login_start_title" = "Scan QR code";
 "authentication_qr_login_start_subtitle" = "Use the camera on this device to scan the QR code shown on your other device:";
-"authentication_qr_login_start_step1" = "Open Element on your other device";
+"authentication_qr_login_start_step1" = "Open Encipher on your other device";
 "authentication_qr_login_start_step2" = "Go to Settings -> Security & Privacy";
 "authentication_qr_login_start_step3" = "Select ‘Link a device’";
 "authentication_qr_login_start_step4" = "Select ‘Show QR code on this device’";
@@ -224,7 +224,7 @@
 
 "authentication_qr_login_display_title" = "Link a device";
 "authentication_qr_login_display_subtitle" = "Scan the QR code below with your device that’s signed out.";
-"authentication_qr_login_display_step1" = "Open Element on your other device";
+"authentication_qr_login_display_step1" = "Open Encipher on your other device";
 "authentication_qr_login_display_step2" = "Select ‘Sign in with QR code’";
 
 "authentication_qr_login_scan_title" = "Scan QR code";
@@ -280,7 +280,7 @@
 "auth_phone_placeholder" = "Phone number";
 "auth_repeat_password_placeholder" = "Repeat password";
 "auth_repeat_new_password_placeholder" = "Confirm your new Encipher account password";
-"auth_home_server_placeholder" = "URL (e.g. https://matrix.org)";
+"auth_home_server_placeholder" = "URL (e.g. https://Encipher.org)";
 "auth_identity_server_placeholder" = "URL (e.g. https://vector.im)";
 "auth_invalid_login_param" = "Incorrect username and/or password";
 "auth_invalid_user_name" = "User names may only contain letters, numbers, dots, hyphens and underscores";
@@ -430,7 +430,7 @@ Tap the + to start adding people.";
 
 // Contacts
 "contacts_address_book_section" = "LOCAL CONTACTS";
-"contacts_address_book_matrix_users_toggle" = "Matrix users only";
+"contacts_address_book_matrix_users_toggle" = "Encipher users only";
 "contacts_address_book_no_identity_server" = "No identity server configured";
 "contacts_address_book_no_contact" = "No local contacts";
 "contacts_address_book_permission_required" = "Permission required to access local contacts";
@@ -1179,7 +1179,7 @@ Tap the + to start adding people.";
 "directory_server_all_rooms" = "All rooms on %@ server";
 "directory_server_all_native_rooms" = "All native Encipher rooms";
 "directory_server_type_homeserver" = "Type a homeserver to list public rooms from";
-"directory_server_placeholder" = "matrix.org";
+"directory_server_placeholder" = "Encipher.org";
 
 // Events formatter
 "event_formatter_member_updates" = "%tu membership changes";
@@ -1602,7 +1602,7 @@ Tap the + to start adding people.";
 "device_verification_self_verify_wait_information" = "Verify this session from one of your other sessions, granting it access to encrypted messages.\n\nUse the latest %@ on your other devices:";
 "device_verification_self_verify_wait_additional_information" = "This works with %@ and other cross-signing capable Encipher clients.";
 "device_verification_self_verify_open_on_other_device_title" = "Open %@ on your other device";
-"device_verification_self_verify_open_on_other_device_information" = "You need to verify this session in order to read your secure message history.\n\nOpen Element on one of your other devices and follow the instructions.";
+"device_verification_self_verify_open_on_other_device_information" = "You need to verify this session in order to read your secure message history.\n\nOpen Encipher on one of your other devices and follow the instructions.";
 "device_verification_self_verify_wait_recover_secrets_without_passphrase" = "Use Security Key";
 "device_verification_self_verify_wait_recover_secrets_with_passphrase" = "Use Security Phrase or Key";
 "device_verification_self_verify_wait_recover_secrets_additional_help" = "Can't access an existing %@ session?";
@@ -1995,7 +1995,7 @@ Tap the + to start adding people.";
 "create_room_show_in_directory" = "Show in room directory";
 "create_room_show_in_directory_footer" = "This will help people find and join.";
 "create_room_section_header_address" = "ADDRESS";
-"create_room_placeholder_address" = "#testroom:matrix.org";
+"create_room_placeholder_address" = "#testroom:Encipher.org";
 "create_room_suggest_room" = "Suggest to space members";
 "create_room_suggest_room_footer" = "Suggested rooms are promoted to space members as good to join.";
 "create_room_processing" = "Creating room";
@@ -2453,7 +2453,7 @@ Tap the + to start adding people.";
 "location_sharing_settings_toggle_title" = "Enable location sharing";
 
 "location_sharing_allow_background_location_title" = "Allow access";
-"location_sharing_allow_background_location_message" = "If you’d like to share your Live location, Element needs location access when the app is in the background.
+"location_sharing_allow_background_location_message" = "If you’d like to share your Live location, Encipher needs location access when the app is in the background.
 To enable access, tap Settings> Location and select Always";
 "location_sharing_allow_background_location_validate_action" = "Settings";
 "location_sharing_allow_background_location_cancel_action" = "Not now";
@@ -2493,7 +2493,7 @@ To enable access, tap Settings> Location and select Always";
 
 // MARK: User sessions management
 
-// Parameter is the application display name (e.g. "Element")
+// Parameter is the application display name (e.g. "Encipher")
 "user_sessions_default_session_display_name" = "%@ iOS";
 
 "user_sessions_overview_title" = "Sessions";
@@ -2537,7 +2537,7 @@ To enable access, tap Settings> Location and select Always";
 "user_session_push_notifications_message" = "When turned on, this session will receive push notifications.";
 "user_session_got_it" = "Got it";
 "user_session_verified_session_title" = "Verified sessions";
-"user_session_verified_session_description" = "Verified sessions are anywhere you are using Element after entering your passphrase or confirming your identity with another verified session.\n\nThis means that you have all the keys needed to unlock your encrypted messages and confirm to other users that you trust this session.";
+"user_session_verified_session_description" = "Verified sessions are anywhere you are using Encipher after entering your passphrase or confirming your identity with another verified session.\n\nThis means that you have all the keys needed to unlock your encrypted messages and confirm to other users that you trust this session.";
 "user_session_unverified_session_title" = "Unverified session";
 "user_session_unverified_session_description" = "Unverified sessions are sessions that have logged in with your credentials but not been cross-verified.\n\nYou should make especially certain that you recognise these sessions as they could represent an unauthorised use of your account.";
 "user_session_permanently_unverified_session_description" = "This session doesn't support encryption, so it can't be verified.\n\nYou won't be able to participate in rooms where encryption is enabled when using this session.\n\nFor best security and privacy, it is recommended to use Encipher clients that support encryption.";
@@ -2645,16 +2645,16 @@ To enable access, tap Settings> Location and select Always";
 /*      iOS specific       */
 /* *********************** */
 
-"matrix" = "Matrix";
+"matrix" = "Encipher";
 
 // Login Screen
 "login_create_account" = "Create account:";
-"login_server_url_placeholder" = "URL (e.g. https://matrix.org)";
+"login_server_url_placeholder" = "URL (e.g. https://Encipher.org)";
 "login_home_server_title" = "Homeserver URL:";
 "login_home_server_info" = "Your homeserver stores all your conversations and account data";
 "login_identity_server_title" = "Identity server URL:";
-"login_identity_server_info" = "Matrix provides identity servers to track which emails etc. belong to which Encipher IDs. Only https://matrix.org currently exists.";
-"login_user_id_placeholder" = "Matrix ID (e.g. @bob:matrix.org or bob)";
+"login_identity_server_info" = "Encipher provides identity servers to track which emails etc. belong to which Encipher IDs. Only https://Encipher.org currently exists.";
+"login_user_id_placeholder" = "Encipher ID (e.g. @bob:Encipher.org or bob)";
 "login_password_placeholder" = "Password";
 "login_optional_field" = "optional";
 "login_display_name_placeholder" = "Display name (e.g. Bob Obson)";
@@ -2851,7 +2851,7 @@ To enable access, tap Settings> Location and select Always";
 
 "account_error_display_name_change_failed" = "Display name change failed";
 "account_error_picture_change_failed" = "Picture change failed";
-"account_error_matrix_session_is_not_opened" = "Matrix session is not opened";
+"account_error_matrix_session_is_not_opened" = "Encipher session is not opened";
 "account_error_email_wrong_title" = "Invalid Email Address";
 "account_error_email_wrong_description" = "This doesn't appear to be a valid email address";
 "account_error_msisdn_wrong_title" = "Invalid Phone Number";
@@ -2916,7 +2916,7 @@ To enable access, tap Settings> Location and select Always";
 "attachment_unsupported_preview_message" = "This file type is not supported.";
 
 // Contacts
-"contact_mx_users" = "Matrix Users";
+"contact_mx_users" = "Encipher Users";
 "contact_local_contacts" = "Local Contacts";
 
 // Groups
@@ -2980,7 +2980,7 @@ To enable access, tap Settings> Location and select Always";
    Automatic localization for en
 
    The following key/value pairs were extracted from the android i18n file:
-    /matrix-sdk/src/main/res/values/strings.xml.
+    /Encipher-sdk/src/main/res/values/strings.xml.
 */
 
 "notice_room_invite" = "%@ invited %@";
@@ -3122,7 +3122,7 @@ To enable access, tap Settings> Location and select Always";
 // room details dialog screen
 
 // contacts list screen
-"invitation_message" = "I\'d like to chat with you with Encipher. Please, visit the website http://matrix.org to have more information.";
+"invitation_message" = "I\'d like to chat with you with Encipher. Please, visit the website http://Encipher.org to have more information.";
 
 // Settings screen
 "settings_title_config" = "Configuration";

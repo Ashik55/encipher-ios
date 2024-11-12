@@ -4496,21 +4496,21 @@ static CGSize kThreadListBarButtonItemImageSize;
                 self->currentAlert = reportReasonAlert;
             }]];
         }
-        
-        if (!isJitsiCallEvent && self.roomDataSource.room.summary.isEncrypted)
-        {
-            [self.eventMenuBuilder addItemWithType:EventMenuItemTypeViewEncryption
-                                            action:[UIAlertAction actionWithTitle:[VectorL10n roomEventActionViewEncryption]
-                                                                            style:UIAlertActionStyleDefault
-                                                                          handler:^(UIAlertAction * action) {
-                MXStrongifyAndReturnIfNil(self);
-                
-                [self cancelEventSelection];
-                
-                // Display encryption details
-                [self showEncryptionInformation:selectedEvent];
-            }]];
-        }
+//        
+//        if (!isJitsiCallEvent && self.roomDataSource.room.summary.isEncrypted)
+//        {
+//            [self.eventMenuBuilder addItemWithType:EventMenuItemTypeViewEncryption
+//                                            action:[UIAlertAction actionWithTitle:[VectorL10n roomEventActionViewEncryption]
+//                                                                            style:UIAlertActionStyleDefault
+//                                                                          handler:^(UIAlertAction * action) {
+//                MXStrongifyAndReturnIfNil(self);
+//                
+//                [self cancelEventSelection];
+//                
+//                // Display encryption details
+//                [self showEncryptionInformation:selectedEvent];
+//            }]];
+//        }
     }
 
     [self.eventMenuBuilder addItemWithType:EventMenuItemTypeCancel
