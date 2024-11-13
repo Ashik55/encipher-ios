@@ -8331,7 +8331,7 @@ public class VectorL10n: NSObject {
   public static var spaceSelectorCreateSpace: String { 
     return VectorL10n.tr("Vector", "space_selector_create_space") 
   }
-  /// Teams are a way to group rooms and people. Create a space to get started.
+  /// Teams are a way to group rooms and people. Create a team to get started.
   public static var spaceSelectorEmptyViewInformation: String { 
     return VectorL10n.tr("Vector", "space_selector_empty_view_information") 
   }
@@ -8395,7 +8395,7 @@ public class VectorL10n: NSObject {
   public static var spacesComingSoonTitle: String { 
     return VectorL10n.tr("Vector", "spaces_coming_soon_title") 
   }
-  /// Create a space
+  /// Create a Team
   public static var spacesCreateSpaceTitle: String { 
     return VectorL10n.tr("Vector", "spaces_create_space_title") 
   }

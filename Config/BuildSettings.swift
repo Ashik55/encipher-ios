@@ -95,14 +95,16 @@ final class BuildSettings: NSObject {
 
     /// Default server proposed on the authentication screen
     static var serverConfigDefaultHomeserverUrlString: String {
-        MDMSettings.serverConfigDefaultHomeserverUrlString ?? "https://enciph-er.com"
+//        MDMSettings.serverConfigDefaultHomeserverUrlString ?? "https://enciph-er.com"
+        MDMSettings.serverConfigDefaultHomeserverUrlString ?? "https://new.enciph-er.com"
     }
     
     /// Default identity server
     static let serverConfigDefaultIdentityServerUrlString = "https://vector.im"
         
     static var serverConfigSygnalAPIUrlString: String {
-        MDMSettings.serverConfigSygnalAPIUrlString ?? "https://enciph-er.com/_matrix/push/v1/notify"
+//        MDMSettings.serverConfigSygnalAPIUrlString ?? "https://enciph-er.com/_matrix/push/v1/notify"
+        MDMSettings.serverConfigSygnalAPIUrlString ?? "https://new.enciph-er.com/_matrix/push/v1/notify"
     }
     
     // MARK: - Legal URLs
