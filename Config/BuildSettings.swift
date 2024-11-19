@@ -95,7 +95,7 @@ final class BuildSettings: NSObject {
 
     /// Default server proposed on the authentication screen
     static var serverConfigDefaultHomeserverUrlString: String {
-//        MDMSettings.serverConfigDefaultHomeserverUrlString ?? "https://enciph-er.com"
+//        MDMSettings.serverConfigDefaultHomeserverUrlString ?? "https://enciph-er.com" //prod
         MDMSettings.serverConfigDefaultHomeserverUrlString ?? "https://new.enciph-er.com"
     }
     
@@ -104,7 +104,7 @@ final class BuildSettings: NSObject {
         
     static var serverConfigSygnalAPIUrlString: String {
 //        MDMSettings.serverConfigSygnalAPIUrlString ?? "https://enciph-er.com/_matrix/push/v1/notify"
-        MDMSettings.serverConfigSygnalAPIUrlString ?? "https://new.enciph-er.com/_matrix/push/v1/notify"
+        MDMSettings.serverConfigSygnalAPIUrlString ?? "http://52.28.217.3:5000/_matrix/push/v1/notify"
     }
     
     // MARK: - Legal URLs
