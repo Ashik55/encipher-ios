@@ -39,16 +39,16 @@ PODS:
   - LoggerAPI (1.9.200):
     - Logging (~> 1.1)
   - Logging (1.4.0)
-  - MatrixSDK (0.27.15):
-    - MatrixSDK/Core (= 0.27.15)
-  - MatrixSDK/Core (0.27.15):
+  - MatrixSDK (0.27.16):
+    - MatrixSDK/Core (= 0.27.16)
+  - MatrixSDK/Core (0.27.16):
     - AFNetworking (~> 4.0.0)
     - GZIP (~> 1.3.0)
     - libbase58 (~> 0.1.4)
     - MatrixSDKCrypto (= 0.4.3)
     - Realm (= 10.27.0)
     - SwiftyBeaver (= 1.9.5)
-  - MatrixSDK/JingleCallStack (0.27.15):
+  - MatrixSDK/JingleCallStack (0.27.16):
     - JitsiMeetSDKLite (= 8.1.2-lite)
     - MatrixSDK/Core
   - MatrixSDKCrypto (0.4.3)
@@ -160,7 +160,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   MatrixSDK:
-    :commit: 07aa62ed1acc9f91507c709471f0e1656de0b4fd
+    :commit: 34c66a0615173fb2d0252f8b9dc5d2650a58a847
     :git: https://github.com/matrix-org/matrix-ios-sdk.git
 
 SPEC CHECKSUMS:
@@ -185,7 +185,7 @@ SPEC CHECKSUMS:
   libPhoneNumber-iOS: 0a32a9525cf8744fe02c5206eb30d571e38f7d75
   LoggerAPI: ad9c4a6f1e32f518fdb43a1347ac14d765ab5e3d
   Logging: beeb016c9c80cf77042d62e83495816847ef108b
-  MatrixSDK: 12b379749b84ab5b3662042acb1914b9f9bb692b
+  MatrixSDK: ce8f2cec670c2212144a129cc617d4144c89b97f
   MatrixSDKCrypto: 27bee960e0e8b3a3039f3f3e93dd2ec88299c77e
   ReadMoreTextView: 19147adf93abce6d7271e14031a00303fe28720d
   Realm: 9ca328bd7e700cc19703799785e37f77d1a130f2
